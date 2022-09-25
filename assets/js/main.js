@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
         // show address
         cT.innerHTML = atob(cT.getAttribute('data-b64mail'));
- 
-        // set mailto on a tags
-        if (cT.tagName === 'A'){
-            cT.setAttribute('href', 'mailto:' + atob(cT.getAttribute('data-b64mail')));
-        }
+        cT.removeAttribute("href");
     });
 });
