@@ -20,7 +20,8 @@ li {
 }
 
 .w {
-    /* max-width: 600px; */
+    max-width: 650px;
+    min-width: 350px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -34,12 +35,50 @@ li {
 table.right1 td:nth-child(1),
 table.right1 th:nth-child(1) {
   text-align: right;
+  vertical-align: top;
 }
+
 table.left2 td:nth-child(2),
 table.left2 th:nth-child(2) {
   text-align: left;
+  vertical-align: top;
 }
 
 th, td {
   padding: 2px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

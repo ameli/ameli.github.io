@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let cT = e.currentTarget;
 
         // show address
-        cT.innerHTML = atob(cT.getAttribute('data-b64mail'));
+        str = cT.getAttribute('data').split("").reverse().join("") + '==';
+        cT.innerHTML = atob(str);
         cT.removeAttribute("href");
     });
 });
