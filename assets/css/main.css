@@ -100,3 +100,7 @@ th, td {
 .input-cursor {
     animation: blink .2s linear infinite alternate;
 }
+
+.inline {
+    display:inline-block;
+}

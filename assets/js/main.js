@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-async function typeSentence(sentence, eleRef, delay = 30) {
+async function typeSentence(sentence, el, delay = 30) {
     const letters = sentence.split("");
     let i = 0;
     while(i < letters.length) {
         await waitForMs(delay);
-        $(eleRef).append(letters[i]);
+        el.append(letters[i]);
         i++
     }
     return;
@@ -29,21 +29,24 @@ function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function deleteSentence(eleRef, start=0, delay=10) {
-    const sentence = $(eleRef).html();
+async function deleteSentence(el, forward=true, till=0, delay=10) {
+    const sentence = el.innerHTML;
     if (sentence) {
         const letters = sentence.split("");
-        let i = 0;
-        while(letters.length > start) {
+        while(letters.length > till) {
             await waitForMs(delay);
-            letters.pop();
-            $(eleRef).html(letters.join(""));
+            if (forward) {
+                letters.pop();
+            } else {
+                letters.shift();
+            }
+            el.innerHTML = letters.join("");
         }
     }
 }
 
-function showCursor(show=true) {
-    var el = document.getElementById("input-cursor");
+function showCursor(elId, show=true) {
+    var el = document.getElementById(elId);
     if (show == true) {
         el.style.display="";
     } else {
@@ -52,27 +55,29 @@ function showCursor(show=true) {
 }
 
 const carouselText = [
-  {text: "Math Geneology"},
+  {text: "Math Genealogy"},
   {text: "ematics"},
   {text: " Geneology"},
 ]
  var textUpdated = false;
 
-async function typewritter(eleRef) {
+async function typewritter(el) {
     if (textUpdated == false){
         textUpdated = true;
         var el = document.getElementById("sentence");
-        await showCursor(true)
-        await deleteSentence(el, 0, 20);
-        await waitForMs(400);
+        await showCursor("cursor-after", true)
+        await deleteSentence(el, true, 0, 20);
+        await waitForMs(300);
         await typeSentence(carouselText[0].text, el, 20);
         await waitForMs(700);
-        await deleteSentence(el, 4, 15);
-        await waitForMs(400);
+        await deleteSentence(el, true, 4, 15);
+        await waitForMs(300);
         await typeSentence(carouselText[1].text, el, 30);
         await waitForMs(500);
         await typeSentence(carouselText[2].text, el, 15);
-        await waitForMs(700);
-        await showCursor(false)
+        await waitForMs(1000);
+        await showCursor("cursor-after", false)
+        await waitForMs(6000);
+        await deleteSentence(el, false, 9, 15);
     }
 }
