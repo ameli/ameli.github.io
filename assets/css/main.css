@@ -82,3 +82,21 @@ th, td {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.input-cursor {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: white;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+.input-cursor {
+    animation: blink .2s linear infinite alternate;
+}
