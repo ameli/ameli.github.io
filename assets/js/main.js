@@ -57,7 +57,7 @@ function showCursor(elId, show=true) {
 const carouselText = [
   {text: "Math Genealogy"},
   {text: "ematics"},
-  {text: " Geneology"},
+  {text: " Genealogy"},
 ]
  var textUpdated = false;
 
