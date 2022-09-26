@@ -77,7 +77,6 @@ async function typewritter(el) {
         await typeSentence(carouselText[2].text, el, 15);
         await waitForMs(1000);
         await showCursor("cursor-after", false)
-        await waitForMs(6000);
         await deleteSentence(el, false, 9, 15);
     }
 }
