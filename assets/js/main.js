@@ -80,3 +80,19 @@ async function typewritter(el) {
         await deleteSentence(el, false, 9, 15);
     }
 }
+
+async function animation() {
+    var el = document.getElementById("image");
+
+    for (let i = 0; i < 700; i += 5) {
+        el.style.filter = `blur(${i}px)`;
+        await waitForMs(3);
+    }
+    el.style.filter = `blur(0px)`;
+    el.style.visibility = 'collapse';
+}
+
+function undo_animation() {
+    var el = document.getElementById("image");
+    el.style.visibility = null;
+}

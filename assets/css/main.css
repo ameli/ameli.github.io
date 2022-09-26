@@ -104,3 +104,7 @@ th, td {
 .inline {
     display:inline-block;
 }
+
+.im {
+    filter: blur;
+}
