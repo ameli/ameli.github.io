@@ -9,7 +9,7 @@ html, body {
 }
 
 .dark-mode a {
-    color: hsl(240, 25%, 50%);
+    color: hsl(200, 25%, 50%);
 }
 
 html {
@@ -33,7 +33,7 @@ body {
 }
 
 a:hover {
-    background-color: hsl(0, 30%, 95%);
+    background-color: hsl(200, 30%, 95%);
 }
 
 .dark-mode a:hover {
