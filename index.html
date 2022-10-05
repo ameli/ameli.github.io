@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HPPZXNF17"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3HPPZXNF17');
+    </script>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +19,12 @@
     <meta name="author" content="Siavash Ameli">
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/type_writter.js"></script>
+    <script src="assets/js/adobe_pdf.js"></script>
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Adobe Embed API -->
+    <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
 </head>
 
 <body a="auto">
@@ -24,19 +39,19 @@
                     <td>
                         <a href="http://ipa-reader.xyz/?text=s%C9%AA%C9%92v%C3%A6%CA%83%20%C9%92m%CE%B5l%C9%A8">Name</a>, 
                         <a href="#" onclick="animation()" onmouseout="undo_animation()" class="tooltip">Headshot
-                            <img src="assets/images/image.jpg" alt="Headshot" class="tooltiptext" id="image">
+                            <img src="assets/images/headshot.jpg" alt="Headshot" class="tooltiptext" id="image">
                         </a>
                     </td>
                 </tr>
                 -->
                 <tr>
                     <td>
-                        About:
+                        whoami:
                     </td>
                     <td>
                         <a href="https://orcid.org/0000-0002-1771-4742">Orcid</a>, 
                         <a href="#" onclick="animation()" onmouseout="undo_animation()" class="tooltip">Headshot
-                            <img src="assets/images/image.jpg" alt="Headshot" class="tooltiptext" id="image">
+                            <img src="assets/images/headshot.jpg" alt="Headshot" class="tooltiptext" id="image">
                         </a>,
                         <a href="https://www.mathgenealogy.org/id.php?id=284512" class="inline">
                             <span id="sentence" onmouseenter="typewritter(this)">Genealogy</span>
@@ -49,7 +64,35 @@
                     </td>
                     <td>
                         <a href="https://arxiv.org/search/?query=Ameli%2C+Siavash&searchtype=all&source=header">arXiv</a>, 
-                        <a href="https://escholarship.org/uc/item/8760j44b">Dissertation</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dissertation:
+                    </td>
+                    <td>
+                        <a href="https://escholarship.org/uc/item/8760j44b" class='tooltip-slide'>Abstract
+                            <img src="assets/images/dissertation_text.jpg" alt="Dissertation Text" class="tooltiptext" id="image">
+                        </a>,
+                        <a href="#" id='showPDF-dissertation-text' class="tooltip-slide">PDF
+                            <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                        </a>,
+                        <a href="#" id='showPDF-dissertation-slides' class="tooltip-slide">Slides
+                            <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Slide" class="tooltiptext" id="image">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Thesis:
+                    </td>
+                    <td>
+                        <a href="#" id='showPDF-thesis-text' class="tooltip-slide">PDF
+                            <img src="assets/images/thesis_text.jpg" alt="Thesis Text" class="tooltiptext" id="image">
+                        </a>,
+                        <a href="#" id='showPDF-thesis-slides' class="tooltip-slide">Slides
+                            <img src="assets/images/thesis_slide.jpg" alt="Thesis Slide" class="tooltiptext" id="image">
+                        </a>
                     </td>
                 </tr>
                 <tr>
@@ -66,11 +109,31 @@
                 </tr>
                 <tr>
                     <td>
-                        HPC Servers:
+                        Repos:
                     </td>
                     <td>
-                        <a href="http://transport.me.berkeley.edu/trace/">TRACE</a>, 
+                        <a href="https://ameli.github.io/imate">iMate</a>, 
+                        <a href="https://ameli.github.io/glearn">G-Learn</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Web Servers:
+                    </td>
+                    <td>
+                        <a href="http://transport.me.berkeley.edu/trace/">TRACE</a> 
+                        <a href="https://vimeo.com/294478521">[<i>Demo Clip</i>]</a>
+                        <a href="https://vimeo.com/298504198" class="tooltip-slide">[<i>A Short Film</i>]
+                            <img src="assets/images/earth_film.png" alt="Earth Film" class="tooltiptext" id="image">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
                         <a href="http://transport.me.berkeley.edu/restore/">RESTORE</a>
+                        <a href="https://vimeo.com/274810038">[<i>Demo Clip</i>]</a>
                     </td>
                 </tr>
                 <tr>
@@ -93,6 +156,9 @@
                     </td>
                 </tr>
             </table>
+        </div>
+        <div class="footer">
+            <a href="#" onclick="darkMode()" id='darkMode'>Dark mode</a>
         </div>
     </main>
 </body>

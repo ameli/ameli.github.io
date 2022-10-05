@@ -1,5 +1,15 @@
 html, body {
     background: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 75%);
+}
+
+.dark-mode a {
+    color: hsl(240, 25%, 50%);
 }
 
 html {
@@ -13,6 +23,21 @@ body {
     margin: 0;
     min-height: 100%;
     overflow-wrap: break-word;
+}
+
+.footer {
+    position: fixed; 
+    width:100%;
+    bottom: 0;
+    left: 8px;
+}
+
+a:hover {
+    background-color: hsl(0, 30%, 95%);
+}
+
+.dark-mode a:hover {
+    background-color: hsl(50, 15%, 15%);
 }
 
 li {
@@ -80,6 +105,45 @@ th, td {
 }
 
 .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip-slide {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-slide .tooltiptext {
+  visibility: hidden;
+  /* width: 500px; */
+  width: 596px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1px 0;
+  /* position: absolute; */
+  position: fixed;
+  z-index: 1;
+  /* bottom: 140%; */
+  bottom: 102%;
+  left: 50%;
+  /* margin-left: -250px; */
+  margin-left: -298px;
+}
+
+.tooltip-slide .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-slide:hover .tooltiptext {
   visibility: visible;
 }
 
