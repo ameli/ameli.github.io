@@ -1,4 +1,9 @@
+// My Adobe Embedded API user ID
 const clientId = "becbabeb5d0d4204b5b99689751e71ef";
+
+// =================================
+// Options to show Text (non-slides)
+// =================================
 
 const viewerOptionsForText = {
     // embedMode: "IN_LINE",
@@ -16,6 +21,10 @@ const viewerOptionsForText = {
     showFullScreen: true,
     // enableLinearization: true,
 };
+
+// ======================
+// Options to show slides
+// ======================
 
 const viewerOptionsForSlide = {
     // embedMode: "IN_LINE",
@@ -35,6 +44,10 @@ const viewerOptionsForSlide = {
     // enableLinearization: true,
 };
 
+// =========
+// fetch PDF
+// =========
+
 function fetchPDF(urlToPDF) {
     return new Promise((resolve) => {
         fetch(urlToPDF)
@@ -45,7 +58,12 @@ function fetchPDF(urlToPDF) {
     })
 }
 
+// ========
+// show PDF
+// ========
+
 function showPDF(urlToPDF, slide=false) {
+
     var adobeDCView = new AdobeDC.View({
             clientId: clientId
         });
@@ -57,7 +75,6 @@ function showPDF(urlToPDF, slide=false) {
         viewerOptions = viewerOptionsForText;
     }
 
-
     var previewFilePromise = adobeDCView.previewFile(
         {
             content: { promise: fetchPDF(urlToPDF) },
@@ -67,32 +84,98 @@ function showPDF(urlToPDF, slide=false) {
     );
 }
 
-// document.addEventListener("adobe_dc_view_sdk.ready", function () {
-//
-//     document.getElementById("showPDF-thesis-text").addEventListener("click", function () {
-//         showPDF("http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf")
-//     });
-//
-//     document.getElementById("showPDF-thesis-slides").addEventListener("click", function () {
-//         showPDF("http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf", true)
-//         // showPDF("https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:6cbc754c-b4c6-4e09-97f0-eb3722ae5468", true)
-//         // showPDF("https://berkeley.box.com/s/zjjlltw8qpjsrdxlrwb146cn72xobbss", true)
-//         // showPDF("https://docdro.id/LIcvxAF", true)
-//         // showPDF("https://www.docdroid.net/LIcvxAF/paper-pdf", true)
-//         // showPDF("https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Survey.pdf", true)
-//         // showPDF("https://sia-test.tiiny.site/", true)
-//     });
-//
-//     document.getElementById("showPDF-dissertation-text").addEventListener("click", function () {
-//         showPDF("http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf")
-//     });
-//
-//     document.getElementById("showPDF-dissertation-slides").addEventListener("click", function () {
-//         showPDF("http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf", true)
-//     });
-// });
+// =============================
+// List of PDF files information
+// =============================
 
+const pdfData = [
+    {
+        id: "view-pdf-thesis-text",
+        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-thesis-slides",
+        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
+        slide: true,
+    },
+    {
+        id: "view-pdf-dissertation-text",
+        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-dissertation-slides",
+        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
+        slide: true,
+    },
+    {
+        id: "view-pdf-gpr",
+        url: "https://arxiv.org/pdf/2206.09976.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-int",
+        url: "https://arxiv.org/pdf/2009.07385.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-inv",
+        url: "https://arxiv.org/pdf/2207.08038.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-res",
+        url: "https://arxiv.org/pdf/1808.07965v1.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-top",
+        url: "https://arxiv.org/pdf/2209.13775.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-dis",
+        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-dis-slide",
+        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
+        slide: true,
+    },
+    {
+        id: "view-pdf-the",
+        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
+        slide: false,
+    },
+    {
+        id: "view-pdf-the-slide",
+        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
+        slide: true,
+    },
+]
+
+// =========================================
+// Add Adobe Embedded event for each element
+// =========================================
+
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
+
+    for (const data of pdfData) {
+        el = document.getElementById(data.id)
+        if (el) {
+            el.addEventListener("click", function () {
+                showPDF(data.url, data.slide)
+            });
+        }
+    } 
+});
+
+// ========================================
 // Add arrayBuffer if necessary i.e. Safari
+// ========================================
+
 (function () {
     if (Blob.arrayBuffer != "function") {
         Blob.prototype.arrayBuffer = myArrayBuffer;

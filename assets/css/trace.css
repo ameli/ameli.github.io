@@ -1,0 +1,234 @@
+.jumbotron {
+    /* background-color:#F44336; */ /* Red */
+    background-color:#E87F32; /* Orange*/
+    /* color:#FFFFFF; */
+}
+
+.panel-footer {
+    /* background-color:#373737; */
+    /* background-color:#031C33; */
+    /* background-color:#18364B; */
+    background-color:#363636;
+    /* color: #77A6C7; */
+    color: #999;
+    height: 180px;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    position: relative; 
+}
+
+.affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
+}
+
+.container-fluid-wide {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.container-wide {
+    width: 100% !important;
+}
+
+#section1 {padding-top:50px;}
+#section2 {padding-top:50px;padding-bottom:50px;color: #fff;}
+#section3 {padding-top:100px;}
+#section4 {padding-top:10px;padding-bottom:50px;}
+#section5 {padding-top:30px;padding-bottom:50px;}
+#section6 {padding-top:50px;padding-bottom:50px;}
+
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/ocean3.jpeg");
+    color:#F1F1F1;
+    text-align: center;
+
+    /* Set a specific height */
+    /* min-height: 800px;  */
+    height:100%!important;
+    width:100%!important;
+    /* -webkit-filter: blur(px); */
+    /* filter: blur(1px); */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+/* .container-fluid{ */
+/*     height:100%; */
+/*     display:table; */
+/*     width: 100%; */
+/*     padding: 0; */
+/* } */
+          
+/* .row-fluid{ */
+/*     height: 100%; */
+/*     display:table-cell; */
+/*     vertical-align: middle; */
+/* } */
+          
+.centering {
+    vertical-align: middle;
+    /* float:none; */
+    margin:0 auto;
+    height: 200px;
+    background-color: rgba(245, 245, 245, 0.25)
+}
+
+/* This is used for the transparent container on parallax */
+.my-vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* This is used to vertically align (center) columns inside a row */
+.my-row-vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+/* This is used to vertically align texts inside a span */
+.my-span-vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+/* This is used to horizontally center columns inside a row */
+.my-horizontal-center-column{
+    float: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.thumbnail{
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    /* background-color: #D2D2D2; */
+}
+
+.thumbnail img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+/* Code syntax highlighting */
+pre.prettyprint {
+    border: 1px solid #E7E7E7!important;
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    padding: 7px!important;
+}
+
+/* any object with class slideanim will slide up within scroll */
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+/* Modals */
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal-header-danger {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5bc0de;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-danger {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}

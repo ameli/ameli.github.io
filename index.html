@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HPPZXNF17"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -12,151 +13,481 @@
         gtag('config', 'G-3HPPZXNF17');
     </script>
 
+    <!-- Meta Data -->
+    <title>Sia</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>sia</title>
     <meta name="author" content="Siavash Ameli">
-    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Bootstrap 3 (Do not upgrade to bootstrap 4 as the style options are not backward compatible) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/trace.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <!-- <link href="http://fonts.cdnfonts.com/css/monaco" rel="stylesheet"> -->
+    <!-- <link href="http://fonts.cdnfonts.com/css/menlo" rel="stylesheet"> -->
+
+    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/type_writter.js"></script>
     <script src="assets/js/adobe_pdf.js"></script>
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- Adobe Embed API -->
     <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 </head>
 
-<body a="auto">
-    <main class="page-content" aria-label="Content">
-        <div class="w">
-            <table class="right1 left2">
-                <tr>
-                    <td>
-                        <!-- whoami: -->
-                        About:
-                    </td>
-                    <td>
-                        <a href="https://orcid.org/0000-0002-1771-4742">Orcid</a>, 
-                        <a href="#" onclick="animation()" onmouseout="undo_animation()" class="tooltip">Headshot
-                            <img src="assets/images/headshot.jpg" alt="Headshot" class="tooltiptext" id="image">
-                        </a>,
-                        <a href="https://www.mathgenealogy.org/id.php?id=284512" class="inline">
-                            Genealogy
-                            <!-- <span id="sentence" onmouseenter="typewritter(this)">Genealogy</span> -->
-                        <!-- </a><span id="cursor-after" class="input-cursor inline" style="display:none">|</span> -->
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Publications:
-                    </td>
-                    <td>
-                        <a href="https://arxiv.org/search/?query=Ameli%2C+Siavash&searchtype=all&source=header">arXiv</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Dissertation:
-                    </td>
-                    <td>
-                        <a href="https://escholarship.org/uc/item/8760j44b" class='tooltip-slide'>Abstract
-                            <!-- <img src="assets/images/dissertation_text.jpg" alt="Dissertation Text" class="tooltiptext" id="image"> -->
-                        </a>,
-                        <!-- <a href="#" id='showPDF-dissertation-text' class="tooltip-slide">PDF -->
-                        <a href="http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf" id='showPDF-dissertation-text' class="tooltip-slide">PDF
-                            <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
-                        </a>,
-                        <!-- <a href="#" id='showPDF-dissertation-slides' class="tooltip-slide">Slides -->
-                        <a href="http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf" id='showPDF-dissertation-slides' class="tooltip-slide">Slides
-                            <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Slide" class="tooltiptext" id="image">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Thesis:
-                    </td>
-                    <td>
-                        <!-- <a href="#" id='showPDF-thesis-text' class="tooltip-slide">PDF -->
-                        <a href="http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf" id='showPDF-thesis-text' class="tooltip-slide">PDF
-                            <img src="assets/images/thesis_text.jpg" alt="Thesis Text" class="tooltiptext" id="image">
-                        </a>,
-                        <!-- <a href="#" id='showPDF-thesis-slides' class="tooltip-slide">Slides -->
-                        <a href="http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf" id='showPDF-thesis-slides' class="tooltip-slide">Slides
-                            <img src="assets/images/thesis_slide.jpg" alt="Thesis Slide" class="tooltiptext" id="image">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Repos:
-                    </td>
-                    <td>
-                        <a href="https://pypi.org/user/ameli/">PyPI</a>, 
-                        <a href="https://anaconda.org/s-ameli">Anaconda Cloud</a>, 
-                        <a href="https://hub.docker.com/u/sameli">Docker Hub</a>, 
-                        <a href="https://github.com/ameli">GitHub</a>, 
-                        <a href="https://www.npmjs.com/~ameli">npm-js</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Packages:
-                    </td>
-                    <td>
-                        <a href="https://ameli.github.io/imate">iMate</a>, 
-                        <a href="https://ameli.github.io/glearn">G-Learn</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Web Servers:
-                    </td>
-                    <td>
-                        <a href="http://transport.me.berkeley.edu/trace/">TRACE</a> 
-                        <a href="https://vimeo.com/294478521">[<i>Demo Clip</i>]</a>
-                        <a href="https://vimeo.com/298504198" class="tooltip-slide">[<i>A Short Film</i>]
-                            <img src="assets/images/earth_film.png" alt="Earth Film" class="tooltiptext" id="image">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <a href="http://transport.me.berkeley.edu/restore/">RESTORE</a>
-                        <a href="https://vimeo.com/274810038">[<i>Demo Clip</i>]</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Media:
-                    </td>
-                    <td>
-                        <a href="https://vimeo.com/sameli">Vimeo</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Contact:
-                    </td>
-                    <td>
-                        <a id="obfemail" href="#" data="QdkVmL5VGbltmclJGQpxWZtF2c"></a>, 
-                        <a href="https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/pub-key.asc" class="tooltip">
-                            PGP key
-                        </a>
-                    </td>
-                </tr>
-            </table>
+<body>
+
+    <!-- ======= -->
+    <!-- Nav Bar -->
+    <!-- ======= -->
+
+    <!-- <nav id="mynav" class="navbar navbar-inverse" data-spy="affix" data-offset-top="200"> -->
+    <!-- <nav id="mynav" class="navbar navbar-light bg-light navbar-expand-lg" data-spy="affix"> -->
+    <!-- <nav id="mynav" class="navbar navbar-light bg-light" data-spy="affix"> -->
+    <nav id="mynav" class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a> -->
+            </div>
+
+            <div>
+                <div class="collapse navbar-collapse" style="padding=0px;" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#section1">Compute</a></li>
+                        <li><a href="#section2">Visualize</a></li>
+                        <li><a href="#section3">User Guide</a></li>
+                        <li><a href="#section-demo">Demo</a></li>
+                        <li><a href="#section4">Tutorial</a></li>
+                        <li><a href="#section5">Gallery</a></li>
+                        <li><a href="#section6">About</a></li>
+                    </ul>
+                    <!-- <ul class="nav navbar-nav nav-right"> -->
+                    <ul class="nav navbar-nav" style="float: right">
+                        <li><a href="#" onclick="darkMode()" id='darkMode'>Dark mode</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="footer">
-            <a href="#" onclick="darkMode()" id='darkMode'>Dark mode</a>
+    </nav>
+
+
+    <!-- <main role="main" class="flex-shrink-0"> -->
+    <!-- <main role="main" class="container"> -->
+
+    <!-- ==================== -->
+    <!-- Introduction Section -->
+    <!-- ==================== -->
+
+    <!-- <section class="header-bg align-items-center position-relative d-flex" id="top"> -->
+    <!-- <div class="container" id="section1" style="padding-top:75px;"> -->
+    <div class="container" id="section1" style="padding-top:20px; height:100%">
+        <div class="row">
+            <!-- <div class="col-md-2" style="min-width:210px; padding-left:0px;"> -->
+            <div class="col-md-2" style="min-width:210px;">
+            <div>
+                <img src="assets/images/headshot.jpg" width="170" class="profile-picture"/>
+                <h4>Siavash Ameli</h4>
+            </div>
+                <ul class="social-links">
+                    <li><a id="obfemail" href="#" data="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
+                    <li><a href="https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/pub-key.asc">PGP key</a></li>
+                    <li><a href="https://orcid.org/0000-0002-1771-4742">Orcid</a></li>
+                    <li><a href="https://github.com/ameli">GitHub</a></li>
+                    <li><a href="https://vimeo.com/sameli">Vimeo</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="col-sm-10" style="padding-left: 30px;"> -->
+            <div class="col-md-auto">
+                <p class='bio'>
+                I am a post-doctoral scholar at the University of California, Berkeley, where I studied Mathematics and Mechanical Engineering and I was fortunate to work with <a href="https://me.berkeley.edu/people/shawn-shadden/">Shawn Shadden</a>. 
+                </p>
+
+                <p>I am passionate about making industry-level software packages on variety of platforms. I am the author of several python packages that can be found on <a href="https://pypi.org/user/ameli/">PyPI</a> and <a href="https://anaconda.org/s-ameli">Anaconda Cloud</a>, Node.JS apps that are can be found on <a href="">npm-js</a>, Docker images that are distributed on <a href="https://hub.docker.com/u/sameli">Docker Hub</a>, and two high-performance computing web-servers that I developed and host at Berkeley Data Center which both are actively used by several research institutions world-wide.
+                </p>
+            </div>
         </div>
-    </main>
+
+        <!-- ========= -->
+        <!-- Education -->
+        <!-- ========= -->
+
+        <h3>Education</h3>
+
+        <ul>
+            <li>Ph.D, Mechanical Engineering, University of California, Berkeley (2019)</li>
+            <li>Masters, Mathematics, University of California, Berkeley (2019)</li>
+            <li>Masters, Mechanical and Aerospace Engineering, Illinois Institute of Technology (2013)</li>
+        </ul>
+
+        <!-- ============ -->
+        <!-- Publications -->
+        <!-- ============ -->
+
+        <h3>Publications</h3>
+
+        <ul>
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
+                <a href="https://doi.org/10.48550/arXiv.2207.08038">arXiv</a>
+                <a href="#" type="button" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
+                <a href="#" id="view-pdf-inv">PDF</a>
+
+
+                <div class="collapse" id="collapse-bib-inv" style="padding-top:10px;">
+                     <div class="card card-body">
+                    <pre class="language-bib">
+<code class="language-bib">@misc{arxiv.2207.08038,
+    doi = {10.48550/ARXIV.2207.08038},
+    author = {Ameli, S. and Shadden, S. C.}, 
+    title = {A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression},
+    year = {2022},
+    archivePrefix={arXiv},
+    eprint = {2207.08038},
+    primaryClass={math.ST},
+    howpublished={\emph{arXiv}: 2207.08038 [math.ST]},
+}</code></pre>
+                </div>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Noise Estimation in Gaussian Process Regression</i></span>.
+                <a href="https://doi.org/10.48550/arXiv.2206.09976">arXiv</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-gpr">BibTeX<a>
+                <a href="#" id="view-pdf-gpr">PDF</a>
+
+                <div class="collapse" id="collapse-bib-gpr" style="padding-top:10px;">
+                    <pre class="language-bib"
+><code class="language-bib">@misc{arxiv.2206.09976,
+    doi = {10.48550/ARXIV.2206.09976},
+    title = {Noise Estimation in {Gaussian} Process Regression},
+    author = {Ameli, S. and Shadden, S. C.},
+    year = {2022},
+    archivePrefix={arXiv},
+    eprint={2206.09976},
+    primaryClass={cs.LG},
+    howpublished={\emph{arXiv}: 2206.09976 [cs.LG]},
+}</code></pre>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Interpolating Log-Determinant and Trace of the Powers of Matrix</i> \(\mathbf{A} + t \mathbf{B}\)</span>.
+                <a href="https://doi.org/10.48550/arXiv.2009.07385">arXiv</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-int">BibTeX</a>
+                <a href="#" id="view-pdf-int">PDF</a>
+
+                <div class="collapse" id="collapse-bib-int" style="padding-top:10px;">
+                    <pre class="language-bib">
+<code class="language-bib">@misc{arxiv.2009.07385,
+    doi = {10.48550/ARXIV.2009.07385},
+    author = {Ameli, S. and Shadden, S. C.}, 
+    title = {Interpolating Log-Determinant and Trace of the Powers of Matrix $\mathbf{A} + t \mathbf{B}$},
+    year = {2022}, 
+    archivePrefix={arXiv},
+    eprint = {2009.07385},
+    primaryClass={math.NA},
+    howpublished={\emph{arXiv}: 2009.07385 [math.NA]},
+}</code></pre>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S. (2019). <span class="my-highlight"><i>Riemannian Geometry of Nonlinear Deformation</i></span>.
+                Doctoral dissertation, University of California, Berkeley.
+                <a href="https://escholarship.org/uc/item/8760j44b">Abstract</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-dis">BibTeX</a>
+                <a href="#" id="view-pdf-dis" class="tooltip-slide">PDF
+                    <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                </a>
+                <a href="#" id="view-pdf-dis-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                    <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                </a>
+
+                <div class="collapse" id="collapse-bib-dis" style="padding-top:10px;">
+                    <pre class="language-bib">
+<code class="language-bib">@phdthesis{ameli-2019a,
+  author  = "Siavash Ameli",
+  title   = "Riemannian Geometry of Nonlinear Deformation",
+  school  = "University of California, Berkeley",
+  year    = "2019"
+}</code></pre>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S. (2019). <span class="my-highlight"><i>Spectral Representation of Solenoidal Fields</i></span>.
+                Thesis, University of California, Berkeley.
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-the">BibTeX</a>
+                <a href="#" id="view-pdf-the" class="tooltip-slide">PDF
+                    <img src="assets/images/thesis_text.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                </a>
+                <a href="#" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                    <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                </a>
+
+                <div class="collapse" id="collapse-bib-the" style="padding-top:10px;">
+                    <pre class="language-bib">
+<code class="language-bib">@mastersthesis{ameli-2019b,
+  author  = "Siavash Ameli",
+  title   = "Spectral Representation of Solenoidal Fields",
+  school  = "University of California, Berkeley",
+  year    = "2019"
+}</code></pre>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Shadden. S. C. (2018). <span class="my-highlight"><i>A Transport Method for Restoring Incomplete Ocean Current Measurements</i></span>.
+                Journal of Geophysical Research: Oceans, 124, 227-242.
+                <a href="https://doi.org/10.1029/2018JC014254">DOI</a>
+                <a href="https://doi.org/10.48550/arXiv.1808.07965">arXiv</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-res">BibTeX</a>
+                <a href="#" id="view-pdf-res">PDF</a>
+
+                <div class="collapse" id="collapse-bib-res" style="padding-top:10px;">
+                    <pre class="language-bib">
+<code class="language-bib">@article{https://doi.org/10.1029/2018JC014254,
+author = {Ameli, Siavash and Shadden, Shawn C.},
+title = {A Transport Method for Restoring Incomplete Ocean Current Measurements},
+journal = {Journal of Geophysical Research: Oceans},
+volume = {124},
+number = {1},
+pages = {227-242},
+doi = {https://doi.org/10.1029/2018JC014254},
+url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JC014254},
+eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2018JC014254},
+year = {2019}
+}</code></pre>
+                </div>
+            </li>
+
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Desai, Y., Shadden. S. C. (2014). <span class="my-highlight"><i>Development of an Efficient and Flexible Pipeline for Lagrangian Coherent Structure Computation</i></span>.
+                Topological Methods in Data Analysis and Visualization III. Mathematics and Visualization. Springer Cham.
+                <a href="https://link.springer.com/chapter/10.1007/978-3-319-04099-8_13">DOI</a>
+                <a href="https://arxiv.org/abs/2209.13775">arXiv</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-top">BibTeX</a>
+                <a href="#" id="view-pdf-top">PDF</a>
+
+                <div class="collapse" id="collapse-bib-top" style="padding-top:10px;">
+                    <pre class="language-bib">
+<code class="language-bib">@InProceedings{10.1007/978-3-319-04099-8_13,
+author="Ameli, Siavash
+and Desai, Yogin
+and Shadden, Shawn C.",
+editor="Bremer, Peer-Timo
+and Hotz, Ingrid
+and Pascucci, Valerio
+and Peikert, Ronald",
+title="Development of an Efficient and Flexible Pipeline for Lagrangian Coherent Structure Computation",
+booktitle="Topological Methods in Data Analysis and Visualization III",
+year="2014",
+publisher="Springer International Publishing",
+address="Cham",
+pages="201--215",
+isbn="978-3-319-04099-8"
+}</code></pre>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- ===== -->
+        <!-- Talks -->
+        <!-- ===== -->
+
+        <h3>Talks</h3>
+
+        <ul>
+            <!-- --------- -->
+            <!-- Row Entry -->
+            <!-- --------- -->
+
+            <li>
+                Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
+                <a href="https://doi.org/10.48550/arXiv.2207.08038">arXiv</a>
+                <a href="#" type="button" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
+                <a href="#" id="view-pdf-inv">PDF</a>
+
+
+                <div class="collapse" id="collapse-bib-inv" style="padding-top:10px;">
+                     <div class="card card-body">
+                    <pre class="language-bib">
+<code class="language-bib">@misc{arxiv.2207.08038,
+    doi = {10.48550/ARXIV.2207.08038},
+    author = {Ameli, S. and Shadden, S. C.}, 
+    title = {A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression},
+    year = {2022},
+    archivePrefix={arXiv},
+    eprint = {2207.08038},
+    primaryClass={math.ST},
+    howpublished={\emph{arXiv}: 2207.08038 [math.ST]},
+}</code></pre>
+                </div>
+                </div>
+            </li>
+        </ul>
+
+    <!-- End of Container "section1" -->
+    </div>
+
+
+
+    <!-- ==== -->
+    <!-- Demo -->
+    <!-- ==== -->
+
+    <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
+    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+        <div class="container container-wide" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
+                    <!-- <div> -->
+                        <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
+                            <!-- <p>Your browser does not support embedded videos. But don't worry! You can see the video at <a target="_blank" href="https://player.vimeo.com/video/274810038">https://player.vimeo.com/video/274810038</a>. -->
+                        <!-- </video> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <div class="col-sm-12" style="height: 100%;">
+                    <div style="height: 100%;">
+                            <iframe src="https://player.vimeo.com/video/298504198?h=6f4d819fec" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==== -->
+    <!-- Demo -->
+    <!-- ==== -->
+
+    <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
+    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+        <div class="container container-wide" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
+                    <!-- <div> -->
+                        <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
+                            <!-- <p>Your browser does not support embedded videos. But don't worry! You can see the video at <a target="_blank" href="https://player.vimeo.com/video/274810038">https://player.vimeo.com/video/274810038</a>. -->
+                        <!-- </video> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <div class="col-sm-12" style="height: 100%;">
+                    <div style="height: 100%;">
+                        <iframe src="https://player.vimeo.com/video/294478521" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==== -->
+    <!-- Demo -->
+    <!-- ==== -->
+
+    <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
+    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+        <div class="container container-wide" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
+                    <!-- <div> -->
+                        <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
+                            <!-- <p>Your browser does not support embedded videos. But don't worry! You can see the video at <a target="_blank" href="https://player.vimeo.com/video/274810038">https://player.vimeo.com/video/274810038</a>. -->
+                        <!-- </video> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <div class="col-sm-12" style="height: 100%;">
+                    <div style="height: 100%;">
+                            <iframe src="https://player.vimeo.com/video/274810038" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====== -->
+    <!-- Footer -->
+    <!-- ====== -->
+
+    <!-- <div class="panel-footer"> -->
+    <!--     <div class="container"> -->
+    <!--         <br/> -->
+    <!--         <br/> -->
+    <!--         <div class="row"> -->
+    <!--             <div class="col-sm-6"> -->
+    <!--                 <p>Copyright &#38;copy; 2022 Siavash Ameli</p> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+
+    <!-- <main class="page-content" aria-label="Content"> -->
+        <!-- <div class="w"> -->
+    <!-- </main> -->
 
     <!-- Load page with dark mode -->
-    <script type="text/javascript"> darkMode() </script>
+    <!-- <script type="text/javascript"> darkMode() </script> -->
 
 </body>
 </html>
