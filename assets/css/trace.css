@@ -17,10 +17,6 @@
     position: relative;
 }
 
-body {
-    position: relative; 
-}
-
 .affix {
     top:0;
     width: 100%;
@@ -51,10 +47,6 @@ body {
 #section4 {padding-top:10px;padding-bottom:50px;}
 #section5 {padding-top:30px;padding-bottom:50px;}
 #section6 {padding-top:50px;padding-bottom:50px;}
-
-body, html {
-    height: 100%;
-}
 
 .parallax {
     /* The image used */

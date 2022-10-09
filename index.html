@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 
 <head>
     <!-- Google Tag -->
@@ -15,9 +14,9 @@
 
     <!-- Meta Data -->
     <title>Sia</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Siavash Ameli">
 
     <!-- Bootstrap 3 (Do not upgrade to bootstrap 4 as the style options are not backward compatible) -->
@@ -25,15 +24,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/trace.css">
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto%20Mono' rel='stylesheet'>
     <!-- <link href="http://fonts.cdnfonts.com/css/monaco" rel="stylesheet"> -->
     <!-- <link href="http://fonts.cdnfonts.com/css/menlo" rel="stylesheet"> -->
 
@@ -53,6 +52,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+
+    <!-- Prism, for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-solarizedlight.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.min.js"></script>
 </head>
 
 <body>
@@ -80,12 +84,12 @@
             </div>
 
             <div>
-                <div class="collapse navbar-collapse" style="padding=0px;" id="myNavbar">
+                <div class="collapse navbar-collapse" style="padding:0px;" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li><a href="#section1">Compute</a></li>
                         <li><a href="#section2">Visualize</a></li>
                         <li><a href="#section3">User Guide</a></li>
-                        <li><a href="#section-demo">Demo</a></li>
+                        <li><a href="#section-video-earth">Demo</a></li>
                         <li><a href="#section4">Tutorial</a></li>
                         <li><a href="#section5">Gallery</a></li>
                         <li><a href="#section6">About</a></li>
@@ -108,17 +112,16 @@
     <!-- ==================== -->
 
     <!-- <section class="header-bg align-items-center position-relative d-flex" id="top"> -->
-    <!-- <div class="container" id="section1" style="padding-top:75px;"> -->
-    <div class="container" id="section1" style="padding-top:20px; height:100%">
+    <div class="container" id="section1" style="min-height:100%">
         <div class="row">
             <!-- <div class="col-md-2" style="min-width:210px; padding-left:0px;"> -->
             <div class="col-md-2" style="min-width:210px;">
             <div>
-                <img src="assets/images/headshot.jpg" width="170" class="profile-picture"/>
+                <img src="assets/images/headshot.jpg" alt="headshot" width="170" class="profile-picture">
                 <h4>Siavash Ameli</h4>
             </div>
                 <ul class="social-links">
-                    <li><a id="obfemail" href="#" data="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
+                    <li><a id="obfemail" href="#" data-email="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
                     <li><a href="https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/pub-key.asc">PGP key</a></li>
                     <li><a href="https://orcid.org/0000-0002-1771-4742">Orcid</a></li>
                     <li><a href="https://github.com/ameli">GitHub</a></li>
@@ -128,7 +131,7 @@
 
             <!-- <div class="col-sm-10" style="padding-left: 30px;"> -->
             <div class="col-md-auto">
-                <p class='bio'>
+                <p>
                 I am a post-doctoral scholar at the University of California, Berkeley, where I studied Mathematics and Mechanical Engineering and I was fortunate to work with <a href="https://me.berkeley.edu/people/shawn-shadden/">Shawn Shadden</a>. 
                 </p>
 
@@ -156,20 +159,18 @@
         <h3>Publications</h3>
 
         <ul>
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
                 <a href="https://doi.org/10.48550/arXiv.2207.08038">arXiv</a>
-                <a href="#" type="button" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
                 <a href="#" id="view-pdf-inv">PDF</a>
 
-
                 <div class="collapse" id="collapse-bib-inv" style="padding-top:10px;">
-                     <div class="card card-body">
-                    <pre class="language-bib">
+                        <pre class="language-bib">
 <code class="language-bib">@misc{arxiv.2207.08038,
     doi = {10.48550/ARXIV.2207.08038},
     author = {Ameli, S. and Shadden, S. C.}, 
@@ -181,17 +182,16 @@
     howpublished={\emph{arXiv}: 2207.08038 [math.ST]},
 }</code></pre>
                 </div>
-                </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Noise Estimation in Gaussian Process Regression</i></span>.
                 <a href="https://doi.org/10.48550/arXiv.2206.09976">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-gpr">BibTeX<a>
+                <a href="#" data-toggle="collapse" data-target="#collapse-bib-gpr">BibTeX</a>
                 <a href="#" id="view-pdf-gpr">PDF</a>
 
                 <div class="collapse" id="collapse-bib-gpr" style="padding-top:10px;">
@@ -209,9 +209,9 @@
                 </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Interpolating Log-Determinant and Trace of the Powers of Matrix</i> \(\mathbf{A} + t \mathbf{B}\)</span>.
@@ -234,9 +234,9 @@
                 </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S. (2019). <span class="my-highlight"><i>Riemannian Geometry of Nonlinear Deformation</i></span>.
@@ -244,10 +244,10 @@
                 <a href="https://escholarship.org/uc/item/8760j44b">Abstract</a>
                 <a href="#" data-toggle="collapse" data-target="#collapse-bib-dis">BibTeX</a>
                 <a href="#" id="view-pdf-dis" class="tooltip-slide">PDF
-                    <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                    <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
                 <a href="#" id="view-pdf-dis-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
-                    <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                    <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
 
                 <div class="collapse" id="collapse-bib-dis" style="padding-top:10px;">
@@ -261,19 +261,19 @@
                 </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S. (2019). <span class="my-highlight"><i>Spectral Representation of Solenoidal Fields</i></span>.
                 Thesis, University of California, Berkeley.
                 <a href="#" data-toggle="collapse" data-target="#collapse-bib-the">BibTeX</a>
                 <a href="#" id="view-pdf-the" class="tooltip-slide">PDF
-                    <img src="assets/images/thesis_text.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                    <img src="assets/images/thesis_text.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
                 <a href="#" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
-                    <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext" id="image">
+                    <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
 
                 <div class="collapse" id="collapse-bib-the" style="padding-top:10px;">
@@ -287,9 +287,9 @@
                 </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Shadden. S. C. (2018). <span class="my-highlight"><i>A Transport Method for Restoring Incomplete Ocean Current Measurements</i></span>.
@@ -316,19 +316,20 @@ year = {2019}
                 </div>
             </li>
 
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Desai, Y., Shadden. S. C. (2014). <span class="my-highlight"><i>Development of an Efficient and Flexible Pipeline for Lagrangian Coherent Structure Computation</i></span>.
                 Topological Methods in Data Analysis and Visualization III. Mathematics and Visualization. Springer Cham.
                 <a href="https://link.springer.com/chapter/10.1007/978-3-319-04099-8_13">DOI</a>
                 <a href="https://arxiv.org/abs/2209.13775">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-top">BibTeX</a>
+                <a data-toggle="collapse" href="#collapse-bib-top" aria-expanded="false" aria-controls="collapse-bib-top">BibTex</a>
                 <a href="#" id="view-pdf-top">PDF</a>
 
                 <div class="collapse" id="collapse-bib-top" style="padding-top:10px;">
+                     <!-- <div class="card card-body"> -->
                     <pre class="language-bib">
 <code class="language-bib">@InProceedings{10.1007/978-3-319-04099-8_13,
 author="Ameli, Siavash
@@ -346,6 +347,7 @@ address="Cham",
 pages="201--215",
 isbn="978-3-319-04099-8"
 }</code></pre>
+                <!-- </div> -->
                 </div>
             </li>
 
@@ -358,32 +360,13 @@ isbn="978-3-319-04099-8"
         <h3>Talks</h3>
 
         <ul>
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
             <!-- Row Entry -->
-            <!-- --------- -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
-                <a href="https://doi.org/10.48550/arXiv.2207.08038">arXiv</a>
-                <a href="#" type="button" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
-                <a href="#" id="view-pdf-inv">PDF</a>
-
-
-                <div class="collapse" id="collapse-bib-inv" style="padding-top:10px;">
-                     <div class="card card-body">
-                    <pre class="language-bib">
-<code class="language-bib">@misc{arxiv.2207.08038,
-    doi = {10.48550/ARXIV.2207.08038},
-    author = {Ameli, S. and Shadden, S. C.}, 
-    title = {A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression},
-    year = {2022},
-    archivePrefix={arXiv},
-    eprint = {2207.08038},
-    primaryClass={math.ST},
-    howpublished={\emph{arXiv}: 2207.08038 [math.ST]},
-}</code></pre>
-                </div>
-                </div>
+                <a href="#">Abstract</a>
             </li>
         </ul>
 
@@ -392,12 +375,12 @@ isbn="978-3-319-04099-8"
 
 
 
-    <!-- ==== -->
-    <!-- Demo -->
-    <!-- ==== -->
+    <!-- =========== -->
+    <!-- Video Earth -->
+    <!-- =========== -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+    <div id="section-video-earth" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
         <div class="container container-wide" style="height: 100%;">
             <div class="row" style="height: 100%;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
@@ -409,19 +392,19 @@ isbn="978-3-319-04099-8"
                 <!-- </div> -->
                 <div class="col-sm-12" style="height: 100%;">
                     <div style="height: 100%;">
-                            <iframe src="https://player.vimeo.com/video/298504198?h=6f4d819fec" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/298504198?h=6f4d819fec" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==== -->
-    <!-- Demo -->
-    <!-- ==== -->
+    <!-- =========== -->
+    <!-- Video Trace -->
+    <!-- =========== -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+    <div id="section-video-trace" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
         <div class="container container-wide" style="height: 100%;">
             <div class="row" style="height: 100%;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
@@ -433,19 +416,19 @@ isbn="978-3-319-04099-8"
                 <!-- </div> -->
                 <div class="col-sm-12" style="height: 100%;">
                     <div style="height: 100%;">
-                        <iframe src="https://player.vimeo.com/video/294478521" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/294478521" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==== -->
-    <!-- Demo -->
-    <!-- ==== -->
+    <!-- ============= -->
+    <!-- Video Restore -->
+    <!-- ============= -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-demo" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+    <div id="section-video-restore" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
         <div class="container container-wide" style="height: 100%;">
             <div class="row" style="height: 100%;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
@@ -457,7 +440,7 @@ isbn="978-3-319-04099-8"
                 <!-- </div> -->
                 <div class="col-sm-12" style="height: 100%;">
                     <div style="height: 100%;">
-                            <iframe src="https://player.vimeo.com/video/274810038" style="width:100%; height: 100%; border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/274810038" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

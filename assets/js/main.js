@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let cT = e.currentTarget;
 
         // show address
-        str = cT.getAttribute('data').split("").reverse().join("") + '==';
+        str = cT.getAttribute('data-email').split("").reverse().join("") + '==';
         cT.innerHTML = atob(str);
         cT.removeAttribute("href");
     });
