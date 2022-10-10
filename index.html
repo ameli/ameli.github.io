@@ -13,17 +13,20 @@
     </script>
 
     <!-- Meta Data -->
-    <title>Sia</title>
+    <title>Siavash Ameli</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Siavash Ameli">
+    <meta name="description" content="Postdoctoral Researcher at University of California, Berkeley">
+    <meta name=”robots” content="index, follow">
 
     <!-- Bootstrap 3 (Do not upgrade to bootstrap 4 as the style options are not backward compatible) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap 5 (Do not use this) -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
@@ -35,6 +38,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto%20Mono' rel='stylesheet'>
     <!-- <link href="http://fonts.cdnfonts.com/css/monaco" rel="stylesheet"> -->
     <!-- <link href="http://fonts.cdnfonts.com/css/menlo" rel="stylesheet"> -->
+    <!-- <link href="http://fonts.cdnfonts.com/css/kings-caslon-trial" rel="stylesheet"> -->
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
@@ -57,6 +61,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-solarizedlight.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.0.1/prism-bibtex.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -74,11 +81,6 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </button>
                 <!-- <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a> -->
             </div>
@@ -86,26 +88,17 @@
             <div>
                 <div class="collapse navbar-collapse" style="padding:0px;" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="#section1">Compute</a></li>
-                        <li><a href="#section2">Visualize</a></li>
-                        <li><a href="#section3">User Guide</a></li>
-                        <li><a href="#section-video-earth">Demo</a></li>
-                        <li><a href="#section4">Tutorial</a></li>
-                        <li><a href="#section5">Gallery</a></li>
-                        <li><a href="#section6">About</a></li>
+                        <li><a href="#section-gallery">Gallery</a></li>
+                        <li><a href="#section-video-earth">Movies</a></li>
                     </ul>
                     <!-- <ul class="nav navbar-nav nav-right"> -->
                     <ul class="nav navbar-nav" style="float: right">
-                        <li><a href="#" onclick="darkMode()" id='darkMode'>Dark mode</a></li>
+                        <li><a href="javascript:void(0);" onclick="darkMode()" id='darkMode'>Dark mode</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-
-
-    <!-- <main role="main" class="flex-shrink-0"> -->
-    <!-- <main role="main" class="container"> -->
 
     <!-- ==================== -->
     <!-- Introduction Section -->
@@ -121,22 +114,41 @@
                 <h4>Siavash Ameli</h4>
             </div>
                 <ul class="social-links">
-                    <li><a id="obfemail" href="#" data-email="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
-                    <li><a href="https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/pub-key.asc">PGP key</a></li>
+                    <li><a id="obfemail" href="javascript:void(0);" data-email="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
+                    <li><a data-toggle="modal" href="#pgpModal" aria-expanded="false" aria-controls="collapse-bib-inv">PGP Key</a></li>
                     <li><a href="https://orcid.org/0000-0002-1771-4742">Orcid</a></li>
                     <li><a href="https://github.com/ameli">GitHub</a></li>
                     <li><a href="https://vimeo.com/sameli">Vimeo</a></li>
+                    <li><a href="javascript:void(0);" id="view-pdf-cv">CV</a></li>
                 </ul>
             </div>
 
-            <!-- <div class="col-sm-10" style="padding-left: 30px;"> -->
-            <div class="col-md-auto">
+            <div class="col-md-auto" style="padding-left:15px; padding-right:15px;">
                 <p>
                 I am a post-doctoral scholar at the University of California, Berkeley, where I studied Mathematics and Mechanical Engineering and I was fortunate to work with <a href="https://me.berkeley.edu/people/shawn-shadden/">Shawn Shadden</a>. 
                 </p>
 
                 <p>I am passionate about making industry-level software packages on variety of platforms. I am the author of several python packages that can be found on <a href="https://pypi.org/user/ameli/">PyPI</a> and <a href="https://anaconda.org/s-ameli">Anaconda Cloud</a>, Node.JS apps that are can be found on <a href="">npm-js</a>, Docker images that are distributed on <a href="https://hub.docker.com/u/sameli">Docker Hub</a>, and two high-performance computing web-servers that I developed and host at Berkeley Data Center which both are actively used by several research institutions world-wide.
                 </p>
+            </div>
+        </div>
+
+        <!-- PGP Key Modal (Hidden till anchor clicked) -->
+        <div class="modal fade" id="pgpModal" tabindex="-1" aria-labelledby="pgplLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+
+                    <!-- Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                        <h4 class="modal-title fs-5" id="pgpModalLabel">PGP Key</h4>
+                    </div>
+
+                    <!-- PGP Text -->
+                    <div class="modal-body" style="height: 500px;">
+                        <embed id="pgpText" src='assets/files/pub-key.asc' style="width: 100%; height: 100%;">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -166,21 +178,23 @@
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
                 <a href="https://doi.org/10.48550/arXiv.2207.08038">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-inv">BibTeX</a>
-                <a href="#" id="view-pdf-inv">PDF</a>
+                <a data-toggle="collapse" href="#collapse-bib-inv" aria-expanded="false" aria-controls="collapse-bib-inv">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-inv">PDF</a>
 
-                <div class="collapse" id="collapse-bib-inv" style="padding-top:10px;">
+                <div class="collapse" id="collapse-bib-inv" style="padding-top:5px;">
+                    <div class="card card-body">
                         <pre class="language-bib">
 <code class="language-bib">@misc{arxiv.2207.08038,
-    doi = {10.48550/ARXIV.2207.08038},
-    author = {Ameli, S. and Shadden, S. C.}, 
-    title = {A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression},
-    year = {2022},
-    archivePrefix={arXiv},
-    eprint = {2207.08038},
-    primaryClass={math.ST},
-    howpublished={\emph{arXiv}: 2207.08038 [math.ST]},
+    doi           = {10.48550/ARXIV.2207.08038},
+    author        = {Ameli, S. and Shadden, S. C.}, 
+    title         = {A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to {Gaussian} Process Regression},
+    year          = {2022},
+    archivePrefix = {arXiv},
+    eprint        = {2207.08038},
+    primaryClass  = {math.ST},
+    howpublished  = {\emph{arXiv}: 2207.08038 [math.ST]},
 }</code></pre>
+                    </div>
                 </div>
             </li>
 
@@ -191,20 +205,20 @@
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Noise Estimation in Gaussian Process Regression</i></span>.
                 <a href="https://doi.org/10.48550/arXiv.2206.09976">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-gpr">BibTeX</a>
-                <a href="#" id="view-pdf-gpr">PDF</a>
+                <a data-toggle="collapse" href="#collapse-bib-gpr" aria-expanded="false" aria-controls="collapse-bib-gpr">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-gpr">PDF</a>
 
-                <div class="collapse" id="collapse-bib-gpr" style="padding-top:10px;">
+                <div class="collapse" id="collapse-bib-gpr" style="padding-top:5px;">
                     <pre class="language-bib"
 ><code class="language-bib">@misc{arxiv.2206.09976,
-    doi = {10.48550/ARXIV.2206.09976},
-    title = {Noise Estimation in {Gaussian} Process Regression},
-    author = {Ameli, S. and Shadden, S. C.},
-    year = {2022},
-    archivePrefix={arXiv},
-    eprint={2206.09976},
-    primaryClass={cs.LG},
-    howpublished={\emph{arXiv}: 2206.09976 [cs.LG]},
+    doi           = {10.48550/ARXIV.2206.09976},
+    title         = {Noise Estimation in {Gaussian} Process Regression},
+    author        = {Ameli, S. and Shadden, S. C.},
+    year          = {2022},
+    archivePrefix = {arXiv},
+    eprint        = {2206.09976},
+    primaryClass  = {cs.LG},
+    howpublished  = {\emph{arXiv}: 2206.09976 [cs.LG]},
 }</code></pre>
                 </div>
             </li>
@@ -216,21 +230,23 @@
             <li>
                 Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>Interpolating Log-Determinant and Trace of the Powers of Matrix</i> \(\mathbf{A} + t \mathbf{B}\)</span>.
                 <a href="https://doi.org/10.48550/arXiv.2009.07385">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-int">BibTeX</a>
-                <a href="#" id="view-pdf-int">PDF</a>
+                <a data-toggle="collapse" href="#collapse-bib-int" aria-expanded="false" aria-controls="collapse-bib-int">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-int">PDF</a>
 
-                <div class="collapse" id="collapse-bib-int" style="padding-top:10px;">
-                    <pre class="language-bib">
+                <div class="collapse" id="collapse-bib-int" style="padding-top:5px;">
+                    <div class="card card-body">
+                        <pre class="language-bib">
 <code class="language-bib">@misc{arxiv.2009.07385,
-    doi = {10.48550/ARXIV.2009.07385},
-    author = {Ameli, S. and Shadden, S. C.}, 
-    title = {Interpolating Log-Determinant and Trace of the Powers of Matrix $\mathbf{A} + t \mathbf{B}$},
-    year = {2022}, 
-    archivePrefix={arXiv},
-    eprint = {2009.07385},
-    primaryClass={math.NA},
-    howpublished={\emph{arXiv}: 2009.07385 [math.NA]},
+    doi           = {10.48550/ARXIV.2009.07385},
+    author        = {Ameli, S. and Shadden, S. C.}, 
+    title         = {Interpolating Log-Determinant and Trace of the Powers of Matrix $\mathbf{A} + t \mathbf{B}$},
+    year          = {2022}, 
+    archivePrefix = {arXiv},
+    eprint        = {2009.07385},
+    primaryClass  = {math.NA},
+    howpublished  = {\emph{arXiv}: 2009.07385 [math.NA]},
 }</code></pre>
+                    </div>
                 </div>
             </li>
 
@@ -242,22 +258,24 @@
                 Ameli, S. (2019). <span class="my-highlight"><i>Riemannian Geometry of Nonlinear Deformation</i></span>.
                 Doctoral dissertation, University of California, Berkeley.
                 <a href="https://escholarship.org/uc/item/8760j44b">Abstract</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-dis">BibTeX</a>
-                <a href="#" id="view-pdf-dis" class="tooltip-slide">PDF
+                <a data-toggle="collapse" href="#collapse-bib-dis" aria-expanded="false" aria-controls="collapse-bib-dis">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-dis" class="tooltip-slide">PDF
                     <img src="assets/images/dissertation_text2.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
-                <a href="#" id="view-pdf-dis-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                <a href="javascript:void(0);" id="view-pdf-dis-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
                     <img src="assets/images/dissertation_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
 
-                <div class="collapse" id="collapse-bib-dis" style="padding-top:10px;">
-                    <pre class="language-bib">
+                <div class="collapse" id="collapse-bib-dis" style="padding-top:5px;">
+                    <div class="card card-body">
+                        <pre class="language-bib">
 <code class="language-bib">@phdthesis{ameli-2019a,
-  author  = "Siavash Ameli",
-  title   = "Riemannian Geometry of Nonlinear Deformation",
-  school  = "University of California, Berkeley",
-  year    = "2019"
+    author = "Siavash Ameli",
+    title  = "Riemannian Geometry of Nonlinear Deformation",
+    school = "University of California, Berkeley",
+    year   = "2019"
 }</code></pre>
+                    </div>
                 </div>
             </li>
 
@@ -268,22 +286,24 @@
             <li>
                 Ameli, S. (2019). <span class="my-highlight"><i>Spectral Representation of Solenoidal Fields</i></span>.
                 Thesis, University of California, Berkeley.
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-the">BibTeX</a>
-                <a href="#" id="view-pdf-the" class="tooltip-slide">PDF
+                <a data-toggle="collapse" href="#collapse-bib-the" aria-expanded="false" aria-controls="collapse-bib-the">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-the" class="tooltip-slide">PDF
                     <img src="assets/images/thesis_text.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
-                <a href="#" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                <a href="javascript:void(0);" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
                     <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
 
-                <div class="collapse" id="collapse-bib-the" style="padding-top:10px;">
-                    <pre class="language-bib">
+                <div class="collapse" id="collapse-bib-the" style="padding-top:5px;">
+                    <div class="card card-body">
+                        <pre class="language-bib">
 <code class="language-bib">@mastersthesis{ameli-2019b,
-  author  = "Siavash Ameli",
-  title   = "Spectral Representation of Solenoidal Fields",
-  school  = "University of California, Berkeley",
-  year    = "2019"
+    author = "Siavash Ameli",
+    title  = "Spectral Representation of Solenoidal Fields",
+    school = "University of California, Berkeley",
+    year   = "2019"
 }</code></pre>
+                    </div>
                 </div>
             </li>
 
@@ -296,23 +316,25 @@
                 Journal of Geophysical Research: Oceans, 124, 227-242.
                 <a href="https://doi.org/10.1029/2018JC014254">DOI</a>
                 <a href="https://doi.org/10.48550/arXiv.1808.07965">arXiv</a>
-                <a href="#" data-toggle="collapse" data-target="#collapse-bib-res">BibTeX</a>
-                <a href="#" id="view-pdf-res">PDF</a>
+                <a data-toggle="collapse" href="#collapse-bib-res" aria-expanded="false" aria-controls="collapse-bib-res">BibTex</a>
+                <a href="javascript:void(0);" id="view-pdf-res">PDF</a>
 
-                <div class="collapse" id="collapse-bib-res" style="padding-top:10px;">
-                    <pre class="language-bib">
+                <div class="collapse" id="collapse-bib-res" style="padding-top:5px;">
+                    <div class="card card-body">
+                        <pre class="language-bib">
 <code class="language-bib">@article{https://doi.org/10.1029/2018JC014254,
-author = {Ameli, Siavash and Shadden, Shawn C.},
-title = {A Transport Method for Restoring Incomplete Ocean Current Measurements},
-journal = {Journal of Geophysical Research: Oceans},
-volume = {124},
-number = {1},
-pages = {227-242},
-doi = {https://doi.org/10.1029/2018JC014254},
-url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JC014254},
-eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2018JC014254},
-year = {2019}
+    author  = {Ameli, Siavash and Shadden, Shawn C.},
+    title   = {A Transport Method for Restoring Incomplete Ocean Current Measurements},
+    journal = {Journal of Geophysical Research: Oceans},
+    volume  = {124},
+    number  = {1},
+    pages   = {227-242},
+    doi     = {https://doi.org/10.1029/2018JC014254},
+    url     = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JC014254},
+    eprint  = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2018JC014254},
+    year    = {2019}
 }</code></pre>
+                    </div>
                 </div>
             </li>
 
@@ -326,29 +348,45 @@ year = {2019}
                 <a href="https://link.springer.com/chapter/10.1007/978-3-319-04099-8_13">DOI</a>
                 <a href="https://arxiv.org/abs/2209.13775">arXiv</a>
                 <a data-toggle="collapse" href="#collapse-bib-top" aria-expanded="false" aria-controls="collapse-bib-top">BibTex</a>
-                <a href="#" id="view-pdf-top">PDF</a>
+                <a href="javascript:void(0);" id="view-pdf-top">PDF</a>
 
-                <div class="collapse" id="collapse-bib-top" style="padding-top:10px;">
-                     <!-- <div class="card card-body"> -->
-                    <pre class="language-bib">
+                <div class="collapse" id="collapse-bib-top" style="padding-top:5px;">
+                    <div class="card card-body">
+                        <pre class="language-bib">
 <code class="language-bib">@InProceedings{10.1007/978-3-319-04099-8_13,
-author="Ameli, Siavash
-and Desai, Yogin
-and Shadden, Shawn C.",
-editor="Bremer, Peer-Timo
-and Hotz, Ingrid
-and Pascucci, Valerio
-and Peikert, Ronald",
-title="Development of an Efficient and Flexible Pipeline for Lagrangian Coherent Structure Computation",
-booktitle="Topological Methods in Data Analysis and Visualization III",
-year="2014",
-publisher="Springer International Publishing",
-address="Cham",
-pages="201--215",
-isbn="978-3-319-04099-8"
+    author    = "Ameli, Siavash and Desai, Yogin and Shadden, Shawn C.",
+    editor    = "Bremer, Peer-Timo and Hotz, Ingrid and Pascucci, Valerio and Peikert, Ronald",
+    title     = "Development of an Efficient and Flexible Pipeline for Lagrangian Coherent Structure Computation",
+    booktitle = "Topological Methods in Data Analysis and Visualization III",
+    year      = "2014",
+    publisher = "Springer International Publishing",
+    address   = "Cham",
+    pages     = "201--215",
+    isbn      = "978-3-319-04099-8"
 }</code></pre>
-                <!-- </div> -->
+                    </div>
                 </div>
+            </li>
+
+        </ul>
+
+        <!-- ============= -->
+        <!-- Invited Talks -->
+        <!-- ============= -->
+
+        <h3>Invited Talks</h3>
+
+        <ul>
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
+            <li>
+                Ameli, S. (2019). <span class="my-highlight"><i>Spectral Representation and Approximation of Solenoidal Fields</i></span>.
+                <a href="https://berkeleyfluidsseminar.github.io/spring19/spring19-april-1.html">Abstract</a>
+                <a href="javascript:void(0);" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                    <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
+                </a>
             </li>
 
         </ul>
@@ -365,7 +403,92 @@ isbn="978-3-319-04099-8"
             <!-- ~~~~~~~~~ -->
 
             <li>
-                Ameli, S., Shadden. S. C. (2022). <span class="my-highlight"><i>A Singular Woodbury and Pseudo-Determinant Matrix Identities and Application to Gaussian Process Regression</i></span>.
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2021). <span class="my-highlight"><i>Supervised Learning of Solenoidal Flows by Modal Analysis</i></span>. SIAM conference on Application of Dynamical Systems, Snowbird UT.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2020). <span class="my-highlight"><i>Reconstruction of Incomplete Spatial Data With Feature Preserving Information Transport</i></span>. American Geophysical Union, Ocean Science Meeting, San Diego, CA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Peacock, T., Shadden, S. C. (2020). <span class="my-highlight"><i>Stochastic trajectory predictions from ADCP velocity measurements</span></i>. American Geophysical Union, Ocean Science Meeting, San Diego, CA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2019). <span class="my-highlight"><i>Theory and Computation of Nonlinear Deformation Spectra of Flows with Geophysical Applications</span></i> SIAM conference on Application of Dynamical Systems, Snowbird UT.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Filippi, M., Allshouse, M., <span>Ameli, S.</span>, Haley, P. J., Kulkarni, C., Lermusiaux, P. F. J., Peacock, T., Rypina, I., Serra, M. (2018). <span class="my-highlight"><i>Experimental comparison of coherent structures methods applied to oceanic flows</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2018). <span class="my-highlight"><i>Filtering flow measurements in the left ventricle using modal analysis</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Frank, S. L., Shadden, S. C. (2018). <span class="my-highlight"><i>Spectral representation and filtering of incompressible flow</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2018). <span class="my-highlight"><i>An Online Gateway for Lagrangian Analysis of Ocean Surface Transport</span></i>. American Geophysical Union, Ocean Science Meeting, Portland, OR.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Ross, S. D., Rypina, I., Shadden, S. C., Peacock, T., Lermusiaux, P. F. J., Allshouse, M., Gawarkiewicz, G., Kirincich, A., Serra, M., Filippi, M., Schmale, D. G., Woolsey, C., Haley, P. J., Jana, S., Mirabito, C., Kulkarni, C., Dutt, A., Gupta, A., Hajj Ali, W., <span class="me">Ameli, S.</span> (2018). <span class="my-highlight"><i>Targeted drifter deployments around Martha's Vineyard to uncover Lagrangian transport structures</span></i>. American Geophysical Union, Ocean Sciences Meeting, Portland OR.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2018). <span class="my-highlight"><i>De-noising of three-dimensional velocity fields using modal analysis</span></i>. 8<sup>th</sup> World Congress of Biomechanics, Dublin, Ireland.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2017). <span class="my-highlight"><i>A vorticity transport model to restore spatial gaps in velocity data</span></i>. 70<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Denver, CO.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2017). <span class="my-highlight"><i>Three-Dimensional Velocity Field De-Noising using Modal Projection</span></i>. 70<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Denver, CO.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2016). <span class="my-highlight"><i>Computation of the deformation spectrum for flows on a sphere</span></i>. 69<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Portland, OR.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2014). <span class="my-highlight"><i>An accurate computation of the flow map gradient</span></i>. Berkeley/Stanford CompFest, Stanford University, Palo Alto, CA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2014). <span class="my-highlight"><i>An accurate computation of the flow map gradient</span></i>. 67<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, San Francisco, CA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2013). <span class="my-highlight"><i>An extension of shear and strain LCS concepts to higher dimensions</span></i>. 66<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Pittsburgh, PA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                <span class="me">Ameli, S.</span>, Shadden, S. C. (2013). <span class="my-highlight"><i>Software development for Lagrangian coherent structure computation</span></i>. Berkeley/Stanford CompFest, University of California, Berkeley, CA.
+                <a href="#">Abstract</a>
+            </li>
+
+            <li>
+                Shadden, S. C., <span class="me">Ameli, S.</span>, Desai, Y. (2013). <span class="my-highlight"><i>Development of an efficient and flexible pipeline for Lagrangian coherent structure computation</span></i>. SIAM conference on Application of Dynamical Systems, Snowbird UT.
                 <a href="#">Abstract</a>
             </li>
         </ul>
@@ -373,7 +496,107 @@ isbn="978-3-319-04099-8"
     <!-- End of Container "section1" -->
     </div>
 
+    <!-- ===== -->
+    <!-- IMATE -->
+    <!-- ===== -->
 
+    <!-- &#60;&#33;&#45;&#45; <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> &#45;&#45;&#62; -->
+    <!-- <div id="section-gallery" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; height:100%;"> -->
+    <!--     <div class="container container-wide" style="height: 100%;"> -->
+    <!--         <div class="row" style="height: 100%;"> -->
+    <!--  -->
+    <!--             <div class="col-sm-9" style="height: 100%; padding:0px"> -->
+    <!--                 <div style="height: 100%; background-color:#191919;"> -->
+    <!--                     <p> aaaaaa </p> -->
+    <!--                     <img src="assets/images/thesis_slide2.jpg" alt="Dissertation Text 2" style="width:100%;"> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--             <div class="col-sm-3" style="height: 100%; padding:0px; background-color:#191919;"> -->
+    <!--                 <div style="height: 100%;"> -->
+    <!--                     <p> aaaaaa </p> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--  -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+    <div id="section-gallery" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+        <div class="container container-wide flex-centered" style="height: 100%;">
+
+
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-sm-12" style="height: 100%; padding:0px">
+                            <img src="assets/images/thesis_slide2.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100%; padding:0px">
+                            <img src="assets/images/thesis_slide3.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100%; padding:0px">
+                            <img src="assets/images/thesis_slide2.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background-color: hsla(0, 0%, 0%, 0);">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background-color: hsla(0, 0%, 0%, 0);">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== -->
+    <!-- IMATE -->
+    <!-- ===== -->
+
+    <!-- &#60;&#33;&#45;&#45; <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> &#45;&#45;&#62; -->
+    <!-- <div id="section-video-trace" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; height:100%;"> -->
+    <!--     <div class="container container-wide" style="height: 100%;"> -->
+    <!--         <div class="row" style="height: 100%;"> -->
+    <!--             &#60;&#33;&#45;&#45; <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> &#45;&#45;&#62; -->
+    <!--                 &#60;&#33;&#45;&#45; <div> &#45;&#45;&#62; -->
+    <!--                     &#60;&#33;&#45;&#45; <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> &#45;&#45;&#62; -->
+    <!--                         &#60;&#33;&#45;&#45; <p>Your browser does not support embedded videos. But don't worry! You can see the video at <a target="_blank" href="https://player.vimeo.com/video/274810038">https://player.vimeo.com/video/274810038</a>. &#45;&#45;&#62; -->
+    <!--                     &#60;&#33;&#45;&#45; </video> &#45;&#45;&#62; -->
+    <!--                 &#60;&#33;&#45;&#45; </div> &#45;&#45;&#62; -->
+    <!--             &#60;&#33;&#45;&#45; </div> &#45;&#45;&#62; -->
+    <!--             <div class="col-sm-9" style="height: 100%; padding:0px"> -->
+    <!--                 <div style="height: 100%; background-color:#191919;"> -->
+    <!--                     <p> aaaaaa </p> -->
+    <!--                     <img src="assets/images/thesis_slide3.jpg" alt="Dissertation Text 2" style="width:100%;"> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--             <div class="col-sm-3" style="height: 100%; padding:0px; background-color:#191919;"> -->
+    <!--                 <div style="height: 100%;"> -->
+    <!--                     <p> aaaaaa </p> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
 
     <!-- =========== -->
     <!-- Video Earth -->
@@ -447,22 +670,23 @@ isbn="978-3-319-04099-8"
         </div>
     </div>
 
-
     <!-- ====== -->
     <!-- Footer -->
     <!-- ====== -->
 
-    <!-- <div class="panel-footer"> -->
-    <!--     <div class="container"> -->
-    <!--         <br/> -->
-    <!--         <br/> -->
-    <!--         <div class="row"> -->
-    <!--             <div class="col-sm-6"> -->
-    <!--                 <p>Copyright &#38;copy; 2022 Siavash Ameli</p> -->
-    <!--             </div> -->
-    <!--         </div> -->
-    <!--     </div> -->
-    <!-- </div> -->
+    <div class="panel-footer">
+        <div class="container">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-sm-6"> -->
+                    <p style="text-align: center;">
+                        Copyright &copy;
+                        <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                        Siavash Ameli
+                    </p>
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
 
 
     <!-- <main class="page-content" aria-label="Content"> -->

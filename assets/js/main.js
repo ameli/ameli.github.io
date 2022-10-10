@@ -1,4 +1,7 @@
-/* Show Email address */
+// ==================
+// Show Email address
+// ==================
+
 document.addEventListener("DOMContentLoaded", function(){
 
     var el = document.getElementById("obfemail");
@@ -11,11 +14,23 @@ document.addEventListener("DOMContentLoaded", function(){
         // show address
         str = cT.getAttribute('data-email').split("").reverse().join("") + '==';
         cT.innerHTML = atob(str);
-        cT.removeAttribute("href");
+        // cT.removeAttribute("href");
+        
+        console.log(el.innerHTML);
+        // el.select();
+        // el.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(atob(str));
+
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied to clipboard.";
+
     });
 });
 
-/* Toggle dark or light mode */
+// =========================
+// Toggle dark or light mode
+// =========================
+
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");

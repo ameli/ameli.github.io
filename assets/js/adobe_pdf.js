@@ -154,6 +154,11 @@ const pdfData = [
         url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
         slide: true,
     },
+    {
+        id: "view-pdf-cv",
+        url: "assets/files/cv.pdf",
+        slide: false,
+    },
 ]
 
 // =========================================
