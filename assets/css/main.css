@@ -222,8 +222,32 @@ a:hover {
     /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
+.nobg:hover {
+    text-decoration: none;
+    background-color: hsla(0, 0%, 0%, 0) !important;
+}
+
 .dark-mode a:hover {
     background-color: hsl(50, 15%, 25%);
+}
+
+.imghv:hover {
+    filter: brightness(1.2);
+}
+
+.banner {
+    font-family: 'Syncopate', sans-serif;
+    color: hsl(190, 100%, 30%);
+    font-size: 44px;
+    padding-left: 0px;
+}
+
+.banner:hover {
+    color: hsl(190, 100%, 40%);
+}
+
+.banner:focus {
+    text-decoration: none;
 }
 
 .nav>li>a:focus,

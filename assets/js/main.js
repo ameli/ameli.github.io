@@ -27,6 +27,40 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
+
+// ======================
+// Read PGP Key from File
+// ======================
+
+function readPGP() {
+
+    // const url = "https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/files/pub-key.asc";
+    const url = "assets/files/pub-key.asc";
+    var storedText;
+
+    // fetch(url)
+    //     .then(function(response) {
+    //         response.text().then(function(text) {
+    //         storedText = text;
+    //         // done();
+    //     });
+    // });
+
+    // fetch(url, {mode: "no-cors", header: {'Access-Control-Allow-Origin':'*', 'Access-Control-Allow-Headers':"*", 'Access-Control-Allow-Methods': 'POST, PUT, DELETE, GET, OPTIONS'}})
+    fetch(url) 
+        .then(function(response) {
+        response.text().then(function(text) {
+            storedText = text;
+            console.log(storedText);
+            
+            var el = document.getElementById('pgpText');
+            el.textContent = storedText;
+            // el.textContent = "aaaaaaa";
+        });
+    });
+}
+
+
 // =========================
 // Toggle dark or light mode
 // =========================
