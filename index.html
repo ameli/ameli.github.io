@@ -143,7 +143,11 @@
                     <!-- Header -->
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
-                        <h4 class="modal-title fs-5" id="pgpModalLabel">PGP Key</h4>
+                        <h4 class="modal-title fs-5" id="pgpModalLabel" style="display: flex">PGP Key
+                        <button type="button" class="btn btn-info btn-sm" onclick="copyToClipboard()" id="copyBtn" style="font-family: monospace; display:inline-block; margin-left: auto; margin-right: 10px; transform: translateY(-5px); outline: none;">
+                            Copy
+                        </button>
+                        </h4>
                     </div>
 
                     <!-- PGP Text -->
@@ -151,7 +155,7 @@
                         <!-- <embed id="pgpText" src='assets/files/pub-key.asc' style="width: 100%; height: 100%;"> -->
                         <!-- <embed id="pgpText" src='https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/files/pub-key.asc' style="width: 100%; height: 100%;"> -->
                         <!-- <embed id="pgpText" style="width: 100%; height: 100%;"> -->
-                        <pre id="pgpText"></pre>
+                        <pre id="pgpText" style="word-wrap: break-word; white-space: pre-wrap; height: 100%"></pre>
                     </div>
                 </div>
             </div>
