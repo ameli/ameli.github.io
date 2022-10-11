@@ -1,3 +1,8 @@
+@font-face {
+    font-family: mysyncopate;
+    src: url('../fonts/Syncopate-Regular.ttf');
+}
+
 body, html {
     height: 100%;
 }
@@ -236,7 +241,8 @@ a:hover {
 }
 
 .banner {
-    font-family: 'Syncopate', sans-serif;
+    /* font-family: 'syncopatenew', sans-serif; */
+    font-family: 'mysyncopate';
     color: hsl(190, 100%, 30%);
     font-size: 44px;
     padding-left: 0px;
@@ -290,6 +296,14 @@ pre .language-bib {
 
 .dark-mode pre {
     background-color: hsl(0, 0%, 15%) !important;
+}
+
+#pgpText {
+    color: hsl(0, 0%, 10%)
+}
+
+.dark-mode #pgpText {
+    color: hsl(0, 0%, 85%);
 }
 
 .me {
@@ -392,7 +406,7 @@ justify-content:center;
 
 .half-section-3 {
     /* background-color: hsl(160, 50%, 94%); */
-    background-color: hsl(160, 30%, 90%);
+    background-color: hsl(160, 25%, 90%);
 }
 .half-section-4 {
     /* background-color:hsl(70, 100%, 95%); */
