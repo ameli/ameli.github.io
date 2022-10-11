@@ -28,7 +28,7 @@ body {
 }
 
 .dark-mode {
-    background-color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 10%);
     color: hsl(0, 0%, 75%);
 }
 
@@ -391,10 +391,12 @@ justify-content:center;
 }
 
 .half-section-3 {
-    background-color: hsl(160, 50%, 94%);
+    /* background-color: hsl(160, 50%, 94%); */
+    background-color: hsl(160, 30%, 90%);
 }
 .half-section-4 {
-    background-color:hsl(70, 100%, 95%);
+    /* background-color:hsl(70, 100%, 95%); */
+    background-color:hsl(40, 90%, 93%);
 }
 
 .dark-mode .half-section-1 {
@@ -405,10 +407,10 @@ justify-content:center;
 }
 
 .dark-mode .half-section-3 {
-    background-color: hsl(200, 100%, 15%);
+    background-color: hsl(193, 100%, 14%);
 }
 .dark-mode .half-section-4 {
-    background-color:hsl(210, 40%, 15%);
+    background-color:hsl(200, 30%, 16%);
 }
 
 .pext {
