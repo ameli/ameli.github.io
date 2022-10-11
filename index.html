@@ -152,9 +152,6 @@
 
                     <!-- PGP Text -->
                     <div class="modal-body" style="height: 500px;">
-                        <!-- <embed id="pgpText" src='assets/files/pub-key.asc' style="width: 100%; height: 100%;"> -->
-                        <!-- <embed id="pgpText" src='https://raw.githubusercontent.com/ameli/ameli.github.io/main/assets/files/pub-key.asc' style="width: 100%; height: 100%;"> -->
-                        <!-- <embed id="pgpText" style="width: 100%; height: 100%;"> -->
                         <pre id="pgpText" style="word-wrap: break-word; white-space: pre-wrap; height: 100%"></pre>
                     </div>
                 </div>
@@ -519,32 +516,37 @@
         <div class="container container-wide" style="height: 100%;">
             <div class="row" style="height: 100%;">
 
-                <div class="col-sm-6" style="height: 100%; padding:100px; padding-left:150px; padding-right: 100px; background-color:hsl(45, 100%, 95%);">
+                <div class="col-sm-6 half-section-1" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
                     <div style="height: 100%;">
+                    <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/imate" class="nobg"><img src="assets/images/logo-imate-light.png" class="imghv" alt="imate logo" style="height:46px"></a> -->
-                        <a href="https://ameli.github.io/imate" class="nobg banner">imate</a>
+                        <a href="https://ameli.github.io/imate" class="nobg banner pext">imate</a>
                         </br>
-                        <p>Visit <i>imate</i> <a href="https://ameli.github.io/imate">Homepage</a>.</p>
-                        <p>
+                        <p class="pext">Visit <i>imate</i> <a href="https://ameli.github.io/imate">Homepage</a>.</p>
+                        <p class='pext'>
                         <i>imate</i>, short for <b>I</b>mplicit <b>Ma</b>trix <b>T</b>race <b>E</b>stimator, is a modular and high-performance C++/CUDA library distributed as a Python package that provides scalable <b>randomized algorithms</b> for the computationally expensive matrix functions in machine learning.
                         </p>
-                        <p> <i>imate</i> is scalable to <b>very large matrice</b> and is capable of <b>peta-scale computations</b> on <b>GPU farms</b>. Its core library for basic linear algebraic operations is <b>faster than OpenBLAS</b>, and its pseudo-random generator is a hundred-fold faster than the implementation in the standard C++ library.</p>
-                        <p>The core of imate, which is implemented in C++ and NVIDIA CUDA framework, is a standalone modular library for high-performance low-level algebraic operations on linear operators (including matrices and affine matrix functions). This library provides a unified interface for computations on both CPU and GPU, a unified interface for dense and sparse matrices, a unified container for various data types, and fully automatic memory management and data transfer between CPU and GPU devices on demand.</p>
+                        <p class="pext"> <i>imate</i> is scalable to <b>very large matrice</b> and is capable of <b>peta-scale computations</b> on <b>GPU farms</b>. Its core library for basic linear algebraic operations is <b>faster than OpenBLAS</b>, and its pseudo-random generator is a hundred-fold faster than the implementation in the standard C++ library.</p>
+                        <p class="pext">The core of imate, which is implemented in C++ and NVIDIA CUDA framework, is a standalone modular library for high-performance low-level algebraic operations on linear operators (including matrices and affine matrix functions). This library provides a unified interface for computations on both CPU and GPU, a unified interface for dense and sparse matrices, a unified container for various data types, and fully automatic memory management and data transfer between CPU and GPU devices on demand.</p>
+
+                        <p class="pext"><i>imate</i> is distributed on <a href="https://pypi.org/project/imate/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/imate">Docker Hub</a> for multiple platforms and for Python and PyPy versions.
 
                     </div>
                 </div>
-                <div class="col-sm-6" style="height: 100%; padding:100px; padding-left:100px; padding-right: 150px; background-color:hsl(210, 100%, 94%);">
+                <div class="col-sm-6 half-section-2" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
                     <div style="height: 100%;">
+                    <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/glearn" class="nobg"><img src="assets/images/logo-glearn-light.png" class="imghv" alt="glearn logo" style="height:55px"></a> -->
-                        <a href="https://ameli.github.io/glearn" class="nobg banner">g-learn</a>
+                        <a href="https://ameli.github.io/glearn" class="nobg banner pext">g-learn</a>
                         </br>
-                        <p>Visit <i>G-learn</i> <a href="https://ameli.github.io/glearn">Homepage</a>.</p>
-                        <p><i>G-learn</i> is a modular and high-performance Python package for machine learning using <b>G</b>aussian process regression.</p>
+                        <p  class="pext">Visit <i>G-learn</i> <a href="https://ameli.github.io/glearn">Homepage</a>.</p>
+                        <p class="pext"><i>G-learn</i> is a modular and high-performance Python package for machine learning using <b>G</b>aussian process regression.</p>
 
-                        <p>This package uses <i>imate</i> for its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
+                        <p class="pext">This package uses <i>imate</i> for its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
 
-                        <p><i>G-learn</i> is the implementation of new the algorithms in Gaussian process regression described in this paper. Some of the features of this package include supporting mixed covariance models, automatic relevance retermination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood), and prediction in dual space with \(\mathcal{O}(n)\) complexity.
+                        <p class="pext"><i>G-learn</i> is the implementation of new the algorithms in Gaussian process regression described in this paper. Some of the features of this package include supporting mixed covariance models, automatic relevance retermination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood), and prediction in dual space with \(\mathcal{O}(n)\) complexity.
                         </p>
+                        <p class="pext"><i>G-learn</i> is distributed on <a href="https://pypi.org/project/glearn/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/glearn">Docker Hub</a> for multiple platforms and Python versions.
                     </div>
                 </div>
 
@@ -561,34 +563,44 @@
         <div class="container container-wide" style="height: 100%;">
             <div class="row" style="height: 100%;">
 
-                <div class="col-sm-6" style="height: 100%; padding:100px; padding-left:150px; padding-right: 100px; background-color:floralwhite;">
+                <div class="col-sm-6 half-section-3" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
                     <div style="height: 100%;">
+                    <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/imate" class="nobg"><img src="assets/images/logo-imate-light.png" class="imghv" alt="imate logo" style="height:46px"></a> -->
-                        <a href="https://ameli.github.io/imate" class="nobg banner">imate</a>
+                        <a href="https://ameli.github.io/imate" class="nobg banner pext">imate</a>
                         </br>
-                        <p>Visit <i>imate</i> <a href="https://ameli.github.io/image">Homepage</a>.</p>
-                        <p>
+                        <p class="pext">Visit <i>imate</i> <a href="https://ameli.github.io/imate">Homepage</a>.</p>
+                        <p class='pext'>
                         <i>imate</i>, short for <b>I</b>mplicit <b>Ma</b>trix <b>T</b>race <b>E</b>stimator, is a modular and high-performance C++/CUDA library distributed as a Python package that provides scalable <b>randomized algorithms</b> for the computationally expensive matrix functions in machine learning.
                         </p>
-                        <p> <i>imate</i> is scalable to <b>very large matrice</b> and is capable of <b>peta-scale computations</b> on <b>GPU farms</b>. Its core library for basic linear algebraic operations is <b>faster than OpenBLAS</b>, and its pseudo-random generator is a hundred-fold faster than the implementation in the standard C++ library.</p>
-                        <p>The core of imate, which is implemented in C++ and NVIDIA CUDA framework, is a standalone modular library for high-performance low-level algebraic operations on linear operators (including matrices and affine matrix functions). This library provides a unified interface for computations on both CPU and GPU, a unified interface for dense and sparse matrices, a unified container for various data types, and fully automatic memory management and data transfer between CPU and GPU devices on demand.</p>
+                        <p class="pext"> <i>imate</i> is scalable to <b>very large matrice</b> and is capable of <b>peta-scale computations</b> on <b>GPU farms</b>. Its core library for basic linear algebraic operations is <b>faster than OpenBLAS</b>, and its pseudo-random generator is a hundred-fold faster than the implementation in the standard C++ library.</p>
+                        <p class="pext">The core of imate, which is implemented in C++ and NVIDIA CUDA framework, is a standalone modular library for high-performance low-level algebraic operations on linear operators (including matrices and affine matrix functions). This library provides a unified interface for computations on both CPU and GPU, a unified interface for dense and sparse matrices, a unified container for various data types, and fully automatic memory management and data transfer between CPU and GPU devices on demand.</p>
+
+                        <p class="pext"><i>imate</i> is distributed on <a href="https://pypi.org/project/imate/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/imate">Docker Hub</a> for multiple platforms and for Python and PyPy versions.
 
                     </div>
                 </div>
-                <div class="col-sm-6" style="height: 100%; padding:100px; padding-left:100px; padding-right: 150px; background-color:floralwhite;">
+                <div class="col-sm-6 half-section-4" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
                     <div style="height: 100%;">
-                        <a href="https://ameli.github.io/glearn" class="nobg"><img src="assets/images/logo-glearn-light.png" class="imghv" alt="glearn logo" style="height:55px"></a>
+                    <!-- <div class="my-vertical-center"> -->
+                        <!-- <a href="https://ameli.github.io/glearn" class="nobg"><img src="assets/images/logo-glearn-light.png" class="imghv" alt="glearn logo" style="height:55px"></a> -->
+                        <a href="https://ameli.github.io/glearn" class="nobg banner pext">g-learn</a>
                         </br>
-                        </br>
-                        <p>
-                            <code>g-learn</code> is a modular and high-performance Python package for machine learning using <b>G</b>aussian process regression with novel algorithms capable of petascale computation on multi-GPU devices.
+                        <p  class="pext">Visit <i>G-learn</i> <a href="https://ameli.github.io/glearn">Homepage</a>.</p>
+                        <p class="pext"><i>G-learn</i> is a modular and high-performance Python package for machine learning using <b>G</b>aussian process regression.</p>
+
+                        <p class="pext">This package uses <i>imate</i> for its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
+
+                        <p class="pext"><i>G-learn</i> is the implementation of new the algorithms in Gaussian process regression described in this paper. Some of the features of this package include supporting mixed covariance models, automatic relevance retermination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood), and prediction in dual space with \(\mathcal{O}(n)\) complexity.
                         </p>
+                        <p class="pext"><i>G-learn</i> is distributed on <a href="https://pypi.org/project/glearn/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/glearn">Docker Hub</a> for multiple platforms and Python versions.
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+
 
     <!-- ======= -->
     <!-- Gallery -->

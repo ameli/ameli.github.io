@@ -280,6 +280,10 @@ a:hover {
     background: hsl(0, 0%, 15%);
 }
 
+.dark-mode b {
+    color: hsl(50, 40%, 80%);
+}
+
 pre .language-bib {
     font-size: 14px !important;
 }
@@ -290,6 +294,11 @@ pre .language-bib {
 
 .me {
     font-weight: bold;
+}
+
+.dark-mode .me {
+    font-weight: bold;
+    color: hsl(50, 40%, 80%);
 }
 
 .center-img {
@@ -372,4 +381,37 @@ justify-content:center;
       -webkit-transform: translate3d(0, 0, 0);
               transform: translate3d(0, 0, 0);
     }
+}
+
+.half-section-1 {
+    background-color:hsl(45, 100%, 95%);
+}
+.half-section-2 {
+    background-color: hsl(210, 100%, 94%);
+}
+
+.half-section-3 {
+    background-color: hsl(160, 50%, 94%);
+}
+.half-section-4 {
+    background-color:hsl(70, 100%, 95%);
+}
+
+.dark-mode .half-section-1 {
+    background-color:hsl(210, 40%, 15%);
+}
+.dark-mode .half-section-2 {
+    background-color: hsl(200, 100%, 15%);
+}
+
+.dark-mode .half-section-3 {
+    background-color: hsl(200, 100%, 15%);
+}
+.dark-mode .half-section-4 {
+    background-color:hsl(210, 40%, 15%);
+}
+
+.pext {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
