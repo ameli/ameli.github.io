@@ -14,16 +14,20 @@ document.addEventListener("DOMContentLoaded", function(){
         // show address
         str = cT.getAttribute('data-email').split("").reverse().join("") + '==';
         cT.innerHTML = atob(str);
-        // cT.removeAttribute("href");
-        
-        console.log(el.innerHTML);
-        // el.select();
-        // el.setSelectionRange(0, 99999);
+
+        // Copy email address to clipboard
         navigator.clipboard.writeText(atob(str));
+    });
 
-        var tooltip = document.getElementById("myTooltip");
-        tooltip.innerHTML = "Copied to clipboard.";
+    // Enable tooltip
+    el.title =  "Email address copied to clipboard.";
+    $('#obfemail').tooltip();
 
+    // Make tooltip hide if mouse leaves the link
+    $('#obfemail').on('show.bs.tooltip', function() {
+        $(this).on('mouseleave', function() {
+            $(this).tooltip('hide');
+        });
     });
 });
 
@@ -47,8 +51,6 @@ function readPGP() {
         response.text().then(function(text) {
             storedText = text;
 
-            console.log(storedText);
-            
             var el = document.getElementById('pgpText');
             el.textContent = storedText;
         });

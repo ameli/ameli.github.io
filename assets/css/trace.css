@@ -98,6 +98,12 @@
     transform: translateY(-50%);
 }
 
+.my-vertical-bottom{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+}
+
 /* This is used to vertically align (center) columns inside a row */
 .my-row-vertical-align{
     display: flex;

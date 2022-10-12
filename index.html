@@ -88,10 +88,10 @@
             <div>
                 <div class="collapse navbar-collapse" style="padding:0px;" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="#section-software">Software</a></li>
-                        <li><a href="#section-server">Web-servers</a></li>
-                        <li><a href="#section-gallery">Gallery</a></li>
-                        <li><a href="#section-video-earth">Movies</a></li>
+                        <li><a href="#software">Software</a></li>
+                        <li><a href="#server">Web-servers</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#videos">Videos</a></li>
                     </ul>
                     <!-- <ul class="nav navbar-nav nav-right"> -->
                     <ul class="nav navbar-nav" style="float: right">
@@ -109,6 +109,11 @@
     <!-- <section class="header-bg align-items-center position-relative d-flex" id="top"> -->
     <div class="container" id="section1" style="min-height:100%">
         <div class="row">
+
+            <!-- ~~~~~~~~~~~~ -->
+            <!-- Social Links -->
+            <!-- ~~~~~~~~~~~~ -->
+
             <!-- <div class="col-md-2" style="min-width:210px; padding-left:0px;"> -->
             <div class="col-md-2" style="min-width:210px;">
             <div>
@@ -116,7 +121,7 @@
                 <h4>Siavash Ameli</h4>
             </div>
                 <ul class="social-links">
-                    <li><a id="obfemail" href="javascript:void(0);" data-email="QdkVmL5VGbltmclJGQpxWZtF2c"></a></li>
+                    <li><a id="obfemail" href="javascript:void(0);" data-email="QdkVmL5VGbltmclJGQpxWZtF2c" data-toggle="tooltip" data-trigger="click" data-placement="top"></a></li>
                     <li><a data-toggle="modal" onclick="readPGP();" href="#pgpModal" aria-expanded="false" aria-controls="collapse-bib-inv">PGP Key</a></li>
                     <li><a href="https://orcid.org/0000-0002-1771-4742">Orcid</a></li>
                     <li><a href="https://github.com/ameli">GitHub</a></li>
@@ -125,6 +130,36 @@
                 </ul>
             </div>
 
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- PGP Key Modal (Hidden till anchor clicked) -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <div class="modal fade" id="pgpModal" tabindex="-1" aria-labelledby="pgplLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+
+                        <!-- Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                            <h4 class="modal-title fs-5" id="pgpModalLabel" style="display: flex">PGP Key
+                            <button type="button" class="btn btn-info btn-sm" onclick="copyToClipboard()" id="copyBtn" style="font-family: monospace; display:inline-block; margin-left: auto; margin-right: 10px; transform: translateY(-5px); outline: none;">
+                                Copy
+                            </button>
+                            </h4>
+                        </div>
+
+                        <!-- PGP Text -->
+                        <div class="modal-body" style="height: 500px;">
+                            <pre id="pgpText" style="word-wrap: break-word; white-space: pre-wrap; height: 100%"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ~~~~~~~~~~~~~~~~~ -->
+            <!-- Introduction Text -->
+            <!-- ~~~~~~~~~~~~~~~~~ -->
+
             <div class="col-md-auto" style="padding-left:15px; padding-right:15px;">
                 <p>
                 I am a post-doctoral scholar at the University of California, Berkeley, where I studied Mathematics and Mechanical Engineering and I was fortunate to work with <a href="https://me.berkeley.edu/people/shawn-shadden/">Shawn Shadden</a>. 
@@ -132,29 +167,6 @@
 
                 <p>I am passionate about making industry-level software packages on variety of platforms. I am the author of several python packages that can be found on <a href="https://pypi.org/user/ameli/">PyPI</a> and <a href="https://anaconda.org/s-ameli">Anaconda Cloud</a>, Node.JS apps that are can be found on <a href="">npm-js</a>, Docker images that are distributed on <a href="https://hub.docker.com/u/sameli">Docker Hub</a>, and two high-performance computing web-servers that I developed and host at Berkeley Data Center which both are actively used by several research institutions world-wide.
                 </p>
-            </div>
-        </div>
-
-        <!-- PGP Key Modal (Hidden till anchor clicked) -->
-        <div class="modal fade" id="pgpModal" tabindex="-1" aria-labelledby="pgplLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-
-                    <!-- Header -->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
-                        <h4 class="modal-title fs-5" id="pgpModalLabel" style="display: flex">PGP Key
-                        <button type="button" class="btn btn-info btn-sm" onclick="copyToClipboard()" id="copyBtn" style="font-family: monospace; display:inline-block; margin-left: auto; margin-right: 10px; transform: translateY(-5px); outline: none;">
-                            Copy
-                        </button>
-                        </h4>
-                    </div>
-
-                    <!-- PGP Text -->
-                    <div class="modal-body" style="height: 500px;">
-                        <pre id="pgpText" style="word-wrap: break-word; white-space: pre-wrap; height: 100%"></pre>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -390,7 +402,7 @@
             <li>
                 Ameli, S. (2019). <span class="my-highlight"><i>Spectral Representation and Approximation of Solenoidal Fields</i></span>.
                 <a href="https://berkeleyfluidsseminar.github.io/spring19/spring19-april-1.html">Abstract</a>
-                <a href="javascript:void(0);" id="view-pdf-the-slide" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
+                <a href="javascript:void(0);" id="view-pdf-the-slide-2" class="tooltip-slide" style="color:hsl(17, 56%, 46%)">Slides
                     <img src="assets/images/thesis_slide.jpg" alt="Dissertation Text 2" class="tooltiptext">
                 </a>
             </li>
@@ -413,85 +425,153 @@
                 <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=109989">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2020). <span class="my-highlight"><i>Reconstruction of Incomplete Spatial Data With Feature Preserving Information Transport</i></span>. American Geophysical Union, Ocean Science Meeting, San Diego, CA.
                 <a href="https://agu.confex.com/agu/osm20/meetingapp.cgi/Paper/656772">Abstract</a>
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 <span class="me">Ameli, S.</span>, Peacock, T., Shadden, S. C. (2020). <span class="my-highlight"><i>Stochastic trajectory predictions from ADCP velocity measurements</span></i>. American Geophysical Union, Ocean Science Meeting, San Diego, CA.
                 <a href="https://agu.confex.com/agu/osm20/meetingapp.cgi/Paper/657259">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2019). <span class="my-highlight"><i>Theory and Computation of Nonlinear Deformation Spectra of Flows with Geophysical Applications</span></i> SIAM conference on Application of Dynamical Systems, Snowbird UT.
                 <a href="https://meetings.siam.org/sess/dsp_talk.cfm?p=99803">Abstract</a>
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Filippi, M., Allshouse, M., <span>Ameli, S.</span>, Haley, P. J., Kulkarni, C., Lermusiaux, P. F. J., Peacock, T., Rypina, I., Serra, M. (2018). <span class="my-highlight"><i>Experimental comparison of coherent structures methods applied to oceanic flows</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
                 <a href="https://meetings.aps.org/Meeting/DFD18/Session/L01.9">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2018). <span class="my-highlight"><i>Filtering flow measurements in the left ventricle using modal analysis</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
                 <a href="https://meetings.aps.org/Meeting/DFD18/Session/G19.3">Abstract</a>
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 <span class="me">Ameli, S.</span>, Frank, S. L., Shadden, S. C. (2018). <span class="my-highlight"><i>Spectral representation and filtering of incompressible flow</span></i>. 71<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Atlanta, GA.
                 <a href="https://meetings.aps.org/Meeting/DFD18/Session/A01.4">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2018). <span class="my-highlight"><i>An Online Gateway for Lagrangian Analysis of Ocean Surface Transport</span></i>. American Geophysical Union, Ocean Science Meeting, Portland, OR.
                 <a href="https://agu.confex.com/agu/os18/meetingapp.cgi/Paper/326627">Abstract</a>
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Ross, S. D., Rypina, I., Shadden, S. C., Peacock, T., Lermusiaux, P. F. J., Allshouse, M., Gawarkiewicz, G., Kirincich, A., Serra, M., Filippi, M., Schmale, D. G., Woolsey, C., Haley, P. J., Jana, S., Mirabito, C., Kulkarni, C., Dutt, A., Gupta, A., Hajj Ali, W., <span class="me">Ameli, S.</span> (2018). <span class="my-highlight"><i>Targeted drifter deployments around Martha's Vineyard to uncover Lagrangian transport structures</span></i>. American Geophysical Union, Ocean Sciences Meeting, Portland OR.
                 <a href="https://agu.confex.com/agu/os18/meetingapp.cgi/Paper/325803">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2018). <span class="my-highlight"><i>De-noising of three-dimensional velocity fields using modal analysis</span></i>. 8<sup>th</sup> World Congress of Biomechanics, Dublin, Ireland.
                 <!-- <a href="#">Abstract</a> -->
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2017). <span class="my-highlight"><i>A vorticity transport model to restore spatial gaps in velocity data</span></i>. 70<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Denver, CO.
                 <a href="https://meetings.aps.org/Meeting/DFD17/Session/L24.2">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 Frank, S. L., <span class="me">Ameli, S.</span>, Szeri, A. J., Shadden, S. C. (2017). <span class="my-highlight"><i>Three-Dimensional Velocity Field De-Noising using Modal Projection</span></i>. 70<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Denver, CO.
                 <a href="https://meetings.aps.org/Meeting/DFD17/Session/L24.1">Abstract</a>
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2016). <span class="my-highlight"><i>Computation of the deformation spectrum for flows on a sphere</span></i>. 69<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Portland, OR.
                 <a href="https://meetings.aps.org/Meeting/DFD16/Session/E8.3">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2014). <span class="my-highlight"><i>An accurate computation of the flow map gradient</span></i>. Berkeley/Stanford CompFest, Stanford University, Palo Alto, CA.
                 <!-- <a href="#">Abstract</a> -->
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2014). <span class="my-highlight"><i>An accurate computation of the flow map gradient</span></i>. 67<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, San Francisco, CA.
                 <a href="https://meetings.aps.org/Meeting/DFD14/Session/D17.1">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2013). <span class="my-highlight"><i>An extension of shear and strain LCS concepts to higher dimensions</span></i>. 66<sup>th</sup> annual meeting of American Physical Society, Division of Fluid Dynamics, Pittsburgh, PA.
                 <a href="https://meetings.aps.org/Meeting/DFD13/Session/G35.3">Abstract</a>
             </li>
 
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
+
             <li>
                 <span class="me">Ameli, S.</span>, Shadden, S. C. (2013). <span class="my-highlight"><i>Software development for Lagrangian coherent structure computation</span></i>. Berkeley/Stanford CompFest, University of California, Berkeley, CA.
                 <!-- <a href="#">Abstract</a> -->
             </li>
+
+            <!-- ~~~~~~~~~ -->
+            <!-- Row Entry -->
+            <!-- ~~~~~~~~~ -->
 
             <li>
                 Shadden, S. C., <span class="me">Ameli, S.</span>, Desai, Y. (2013). <span class="my-highlight"><i>Development of an efficient and flexible pipeline for Lagrangian coherent structure computation</span></i>. SIAM conference on Application of Dynamical Systems, Snowbird UT.
@@ -512,12 +592,16 @@
     <!-- ======== -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-software" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; height:100%;">
-        <div class="container container-wide" style="height: 100%;">
-            <div class="row" style="height: 100%;">
+    <div id="software" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; min-height:100vh;">
+        <div class="container container-wide" style="min-height: 100vh">
+            <div class="row equal" style="min-height: 100vh">
 
-                <div class="col-sm-6 half-section-1" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
-                    <div style="height: 100%;">
+                <!-- ~~~~~~~~~~~ -->
+                <!-- Left Column -->
+                <!-- ~~~~~~~~~~~ -->
+
+                <div class="col-sm-6 half-section-1" style="min-height: 100vh; padding-top:8%; padding-left:8%; padding-right: 8%; padding-bottom: 8%;">
+                    <div style="min-height: 100%;">
                     <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/imate" class="nobg"><img src="assets/images/logo-imate-light.png" class="imghv" alt="imate logo" style="height:46px"></a> -->
                         <a href="https://ameli.github.io/imate" class="nobg banner pext">imate</a>
@@ -533,8 +617,13 @@
 
                     </div>
                 </div>
-                <div class="col-sm-6 half-section-2" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
-                    <div style="height: 100%;">
+
+                <!-- ~~~~~~~~~~~~ -->
+                <!-- Right Column -->
+                <!-- ~~~~~~~~~~~~ -->
+
+                <div class="col-sm-6 half-section-2" style="min-height: 100vh; padding-top:8%; padding-left:8%; padding-right: 8%; padding-bottom: 8%;">
+                    <div style="min-height: 100%;">
                     <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/glearn" class="nobg"><img src="assets/images/logo-glearn-light.png" class="imghv" alt="glearn logo" style="height:55px"></a> -->
                         <a href="https://ameli.github.io/glearn" class="nobg banner pext">g-learn</a>
@@ -544,7 +633,7 @@
 
                         <p class="pext">This package uses <i>imate</i> for its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
 
-                        <p class="pext"><i>G-learn</i> is the implementation of new the algorithms in Gaussian process regression described in this paper. Some of the features of this package include supporting mixed covariance models, automatic relevance retermination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood), and prediction in dual space with \(\mathcal{O}(n)\) complexity.
+                        <p class="pext">Some of the features of this package include supporting mixed covariance models, automatic relevance determination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood) as described in <a href="javascript:void(0);" id="view-pdf-gpr-2">this paper</a>, and successive evaluations of prediction with \(\mathcal{O}(n)\) complexity.
                         </p>
                         <p class="pext"><i>G-learn</i> is distributed on <a href="https://pypi.org/project/glearn/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/glearn">Docker Hub</a> for multiple platforms and Python versions.
                     </div>
@@ -559,15 +648,19 @@
     <!-- ======= -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-server" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; height:100%;">
-        <div class="container container-wide" style="height: 100%;">
-            <div class="row" style="height: 100%;">
+    <div id="server" class="container-fluid container-fluid-wide" style="align-items: center; display: flex; min-height:100vh;">
+        <div class="container container-wide" style="min-height: 100vh">
+            <div class="row equal" style="min-height: 100vh">
 
-                <div class="col-sm-6 half-section-3" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
-                    <div style="height: 100%;">
+                <!-- ~~~~~~~~~~~ -->
+                <!-- Left Column -->
+                <!-- ~~~~~~~~~~~ -->
+
+                <div class="col-sm-6 half-section-3" style="min-height: 100vh; padding-top:8%; padding-left:8%; padding-right: 8%; padding-bottom: 8%;">
+                    <div style="min-height: 100%;">
                     <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/imate" class="nobg"><img src="assets/images/logo-imate-light.png" class="imghv" alt="imate logo" style="height:46px"></a> -->
-                        <a href="https://ameli.github.io/imate" class="nobg banner pext">TRACE</a>
+                        <a href="http://transport.me.berkeley.edu/trace" class="nobg banner pext">TRACE</a>
                         </br>
                         <p class="pext">Visit <i>Trace</i> <a href="http://transport.me.berkeley.edu/trace">Homepage</a>.</p>
                         <p class='pext'>
@@ -580,18 +673,23 @@
 
                     </div>
                 </div>
-                <div class="col-sm-6 half-section-4" style="height: 100%; padding-top:8%; padding-left:8%; padding-right: 8%;">
-                    <div style="height: 100%;">
+
+                <!-- ~~~~~~~~~~~~ -->
+                <!-- Right Column -->
+                <!-- ~~~~~~~~~~~~ -->
+
+                <div class="col-sm-6 half-section-4" style="min-height: 100vh; padding-top:8%; padding-left:8%; padding-right: 8%; padding-bottom: 8%;">
+                    <div style="min-height: 100%;">
                     <!-- <div class="my-vertical-center"> -->
                         <!-- <a href="https://ameli.github.io/glearn" class="nobg"><img src="assets/images/logo-glearn-light.png" class="imghv" alt="glearn logo" style="height:55px"></a> -->
                         <a href="http://transport.me.berkeley.edu/restore" class="nobg banner pext">RESTORE</a>
                         </br>
-                        <p  class="pext">Visit <i>Restore</i> <a href="https://ameli.github.io/glearn">Homepage</a>.</p>
+                        <p  class="pext">Visit <i>Restore</i> <a href="http://transport.me.berkeley.edu/restore">Homepage</a>.</p>
                         <p class="pext"><i>G-learn</i> is a modular and high-performance Python package for machine learning using <b>G</b>aussian process regression.</p>
 
                         <p class="pext">This package uses <i>imate</i> for its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
 
-                        <p class="pext"><i>G-learn</i> is the implementation of new the algorithms in Gaussian process regression described in this paper. Some of the features of this package include supporting mixed covariance models, automatic relevance retermination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood), and prediction in dual space with \(\mathcal{O}(n)\) complexity.
+                        <p class="pext">Some of the features of this package include supporting mixed covariance models, automatic relevance determination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood) as described in <a href="javascript:void(0);" id="view-pdf-gpr-2">this paper</a>, and successive evaluations of prediction with \(\mathcal{O}(n)\) complexity.
                         </p>
                         <p class="pext"><i>G-learn</i> is distributed on <a href="https://pypi.org/project/glearn/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/glearn">Docker Hub</a> for multiple platforms and Python versions.
                     </div>
@@ -601,53 +699,256 @@
         </div>
     </div>
 
-
     <!-- ======= -->
     <!-- Gallery -->
     <!-- ======= -->
 
-    <div id="section-gallery" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
+    <div class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:120%;">
         <div class="container container-wide flex-centered" style="height: 100%;">
 
+            <div id="gallery" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false" style="width: 100vw;">
 
-            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-
+                <!-- ~~~~~~~~~~ -->
                 <!-- Indicators -->
+                <!-- ~~~~~~~~~~ -->
+
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#gallery" data-slide-to="0" class="active"></li>
+                    <li data-target="#gallery" data-slide-to="1"></li>
+                    <li data-target="#gallery" data-slide-to="2"></li>
+                    <li data-target="#gallery" data-slide-to="3"></li>
+                    <li data-target="#gallery" data-slide-to="4"></li>
+                    <li data-target="#gallery" data-slide-to="5"></li>
+                    <li data-target="#gallery" data-slide-to="6"></li>
+                    <li data-target="#gallery" data-slide-to="7"></li>
+                    <li data-target="#gallery" data-slide-to="8"></li>
+                    <li data-target="#gallery" data-slide-to="9"></li>
+                    <li data-target="#gallery" data-slide-to="10"></li>
+                    <li data-target="#gallery" data-slide-to="11"></li>
+                    <li data-target="#gallery" data-slide-to="12"></li>
+                    <li data-target="#gallery" data-slide-to="13"></li>
                 </ol>
 
-                <!-- Wrapper for slides -->
+                <!-- ~~~~~~ -->
+                <!-- Slides -->
+                <!-- ~~~~~~ -->
+
                 <div class="carousel-inner">
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
                     <div class="item active">
-                        <div class="col-sm-12" style="height: 100%; padding:0px">
-                            <!-- <img src="assets/images/thesis_slide2.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
-                            <img src="assets/images/thesis_slide2.png" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <!-- <img src="assets/images/thesis_slide_1.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
+                            <img src="assets/images/thesis_slide_1.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Eigenvalues of Solenoidal Laplace Operator (<i>Thesis, p. 59</i>)</h5>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
                     <div class="item">
-                        <div class="col-sm-12" style="height: 100%; padding:0px">
-                            <!-- <img src="assets/images/thesis_slide3.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
-                            <img src="assets/images/thesis_slide3.png" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <!-- <img src="assets/images/thesis_slide_2.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
+                            <img src="assets/images/thesis_slide_2.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Eigenvalues of Solenoidal Laplace Operator (<i>Thesis, p. 58</i>)</h5>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
                     <div class="item">
-                        <div class="col-sm-12" style="height: 100%; padding:0px">
-                            <img src="assets/images/thesis_slide2.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <!-- <img src="assets/images/thesis_slide_3.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
+                            <img src="assets/images/thesis_slide_3.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Eigenvalues of Solenoidal Laplace Operator (<i>Thesis, p. 58</i>)</h5>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <!-- <img src="assets/images/thesis_slide_4.jpg" alt="Slide" class="center-img" style="max-height:95vh; max-width:100vw;"> -->
+                            <img src="assets/images/thesis_slide_4.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Arnold-Beltrami-Childress Flow (<i>Thesis, p. 54</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_1.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Finite-Time Lyapunov Exponent on Sphere (<i>Dissertation, p. 123</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_2.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Finite-Time Lyapunov Exponent, Indian Ocean (<i>Dissertation, p. 147</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_3.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Finite-Time Lyapunov Exponent, Pacific Ocean (<i>Dissertation, p. 148</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_4.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Sea Surface Temperature, Pacific Ocean (<i>Dissertation, p. 149</i>. The data is courtesy of JPL.)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_5.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Chlorophyll Concentration, Pacific Ocean (<i>Dissertation, p. 150</i>. The data is courtesy of JPL.)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_6.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Finite-Time Lyapunov Exponent, Atlantic Ocean (<i>Dissertation, p. 151</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_7.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Sea Surface Temperature, Atlantic Ocean (<i>Dissertation, p. 152</i>. The data is courtesy of JPL.)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_8.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Chlorophyll Concentration, Atlantic Ocean (<i>Dissertation, p. 153</i>. The data is courtesy of JPL.)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_9.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Finite-Time Lyapunov Exponent, Southern Ocean (<i>Dissertation, p. 154</i>)</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~ -->
+                    <!-- Slide -->
+                    <!-- ~~~~~ -->
+
+                    <div class="item">
+                        <div class="col-sm-12" style="height: 100vh; padding:0px">
+                            <img src="assets/images/dissertation_slide_10.png" alt="Slide" class="center-img my-vertical-bottom" style="max-height:100vh; max-width:98vw;">
+
+                            <div class="carousel-caption" style="display: flex; justify-content: center;">
+                                <h5 class="for-caption">Sea Surface Temperature, Southern Ocean (<i>Dissertation, p. 155</i>. The data is courtesy of JPL.)</h5>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
                 <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background-color: hsla(0, 0%, 0%, 0);">
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Left Control -->
+                <a class="left carousel-control" href="#gallery" data-slide="prev" style="background-color: hsla(0, 0%, 0%, 0);">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background-color: hsla(0, 0%, 0%, 0);">
+
+                <!-- Right Control -->
+                <a class="right carousel-control" href="#gallery" data-slide="next" style="background-color: hsla(0, 0%, 0%, 0);">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -660,9 +961,10 @@
     <!-- =========== -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-video-earth" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
-        <div class="container container-wide" style="height: 100%; padding: 0px;">
-            <div class="row" style="height: 100%;">
+    <div class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:125vh;">
+        <!-- <div id="videos" class="container container-wide" style="height: 100vh; padding: 0px;"> -->
+        <div id="videos" class="container container-wide" style="padding: 0px;">
+            <div class="row" style="height: 100vh; max-width: 100vw;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
                     <!-- <div> -->
                         <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
@@ -670,11 +972,17 @@
                         <!-- </video> -->
                     <!-- </div> -->
                 <!-- </div> -->
-                <div class="col-sm-12" style="height: 100%;">
+                <div class="col-sm-12" style="height: 100%; padding:0px;">
                     <div style="height: 100%;">
                             <iframe src="https://player.vimeo.com/video/298504198?h=6f4d819fec&byline=0&portrait=0&title=1" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
+
+            <div class="flex-centered">
+                <p class="video-caption">
+                    The above video shows the finite-time Lyapunov exponent (FTLE) field over the entire globe capturing one month of flow advection. The high-performance computation on ocean's surface velocity field is performed using <a href="http://transport.me.berkeley.edu/trace">TRACE</a> on a massive grid of 576 million points; that is, on average, nine grid points per square mile. During the animation, the FTLE is superimposed over the sea surface temperature field (courtesy of JPL/NASA) as an underlying advection-dominant field to be compared with the Lagrangian coherent structures on ocean currents.
+                </p>
             </div>
         </div>
     </div>
@@ -684,9 +992,10 @@
     <!-- =========== -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-video-trace" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
-        <div class="container container-wide" style="height: 100%; padding: 0px">
-            <div class="row" style="height: 100%;">
+    <div class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:125vh;">
+        <!-- <div id="video-trace" class="container container-wide" style="height: 100vh; padding: 0px"> -->
+        <div id="video-trace" class="container container-wide" style="padding: 0px">
+            <div class="row" style="height: 100vh; max-width: 100vw;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
                     <!-- <div> -->
                         <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
@@ -694,11 +1003,17 @@
                         <!-- </video> -->
                     <!-- </div> -->
                 <!-- </div> -->
-                <div class="col-sm-12" style="height: 100%;">
+                <div class="col-sm-12" style="height: 100%; padding:0px;">
                     <div style="height: 100%;">
                         <iframe src="https://player.vimeo.com/video/294478521?byline=0&portrait=0&title=1" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
+
+            <div class="flex-centered">
+                <p class="video-caption">
+                    The above video is a demonstration of <a href="http://transport.me.berkeley.edu/trace">TRACE</a>.
+                </p>
             </div>
         </div>
     </div>
@@ -708,9 +1023,10 @@
     <!-- ============= -->
 
     <!-- <div id="section-demo" class="container-fluid" style="background-color:#040305; align-items: center; display: flex; height: calc(100% - 50px); padding-top:50px;"> -->
-    <div id="section-video-restore" class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:100%;">
-        <div class="container container-wide" style="height: 100%; padding: 0px;">
-            <div class="row" style="height: 100%;">
+    <div class="container-fluid container-fluid-wide" style="background-color:#010001; align-items: center; display: flex; height:125vh;">
+        <!-- <div id="video-restore" class="container container-wide" style="height: 100vh; padding: 0px;"> -->
+        <div id="video-restore" class="container container-wide" style="padding: 0px;">
+            <div class="row" style="height: 100vh; max-width: 100vw;">
                 <!-- <div class="col-sm-12 my-row-vertical-align" style="height: 100%;"> -->
                     <!-- <div> -->
                         <!-- <video id="demo-video" style="cursor: pointer;" controls="true" poster="public/images/Demo_poster.svg" onclick="this.paused ? this.play() : this.pause();" source src="public/images/Demo.mp4" type="video/mp4" weight="100%"> -->
@@ -718,11 +1034,17 @@
                         <!-- </video> -->
                     <!-- </div> -->
                 <!-- </div> -->
-                <div class="col-sm-12" style="height: 100%;">
+                <div class="col-sm-12" style="height: 100%; padding:0px;">
                     <div style="height: 100%;">
                             <iframe src="https://player.vimeo.com/video/274810038?byline=0&portrait=0&title=1" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
+
+            <div class="flex-centered">
+                <p class="video-caption">
+                    The above video is a demonstration of <a href="http://transport.me.berkeley.edu/restore">RESTORE</a>.
+                </p>
             </div>
         </div>
     </div>

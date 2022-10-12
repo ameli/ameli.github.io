@@ -33,7 +33,8 @@ body {
 }
 
 .dark-mode {
-    background-color: hsl(0, 0%, 10%);
+    /* background-color: hsl(0, 0%, 9%); */
+    background-color: hsl(200, 15%, 14%);
     color: hsl(0, 0%, 75%);
 }
 
@@ -91,10 +92,10 @@ th, td {
     padding: 2px;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
+/* .tooltip { */
+/*     position: relative; */
+/*     display: inline-block; */
+/* } */
 
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -295,7 +296,8 @@ pre .language-bib {
 }
 
 .dark-mode pre {
-    background-color: hsl(0, 0%, 15%) !important;
+    /* background-color: hsl(0, 0%, 15%) !important; */
+    background-color: hsl(200, 15%, 14%) !important;
 }
 
 #pgpText {
@@ -326,8 +328,8 @@ pre .language-bib {
     /* flex-direction-column; */
     /* justify-content:center */
     display:flex;
-align-items:center;
-justify-content:center;
+    align-items:center;
+    justify-content:center;
 }
 
 /* .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev { */
@@ -337,7 +339,7 @@ justify-content:center;
 .carousel-control {
     /* top: 95%; */
     width: 6%;
-    left:
+    /* left: */
 }
 
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
@@ -397,6 +399,7 @@ justify-content:center;
     }
 }
 
+/* For the background color of software and server sections */
 .half-section-1 {
     background-color:hsl(45, 100%, 95%);
 }
@@ -406,13 +409,14 @@ justify-content:center;
 
 .half-section-3 {
     /* background-color: hsl(160, 50%, 94%); */
-    background-color: hsl(160, 25%, 90%);
+    background-color: hsl(170, 25%, 90%);
 }
 .half-section-4 {
     /* background-color:hsl(70, 100%, 95%); */
     background-color:hsl(40, 90%, 93%);
 }
 
+/* In dark mode, for the background color of software and server sections */
 .dark-mode .half-section-1 {
     background-color:hsl(210, 40%, 15%);
 }
@@ -421,13 +425,44 @@ justify-content:center;
 }
 
 .dark-mode .half-section-3 {
-    background-color: hsl(193, 100%, 14%);
+    background-color: hsl(195, 100%, 15%);
 }
 .dark-mode .half-section-4 {
     background-color:hsl(200, 30%, 16%);
 }
 
+/* For the paragraphs of Software section. Makes paragraphs have distance */
 .pext {
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+
+/* To make bootstrap columns in the same row to have the same height */
+.equal {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* For the Captions of Bootstrap Carousel. */
+.for-caption {
+    /* color: hsl(0deg, 0%, 80%); */
+    color: hsl(50, 40%, 80%);
+    background-color: hsla(0deg, 0%, 10%, 37%);
+    width: fit-content;
+}
+
+/* For caption under the videos which has a dark background. */
+.video-caption {
+    color: hsl(0, 0%, 65%);
+    text-align: center;
+    width: 70%;
+    font-size: 15px;
+    padding-top: 20px;
 }

@@ -90,73 +90,75 @@ function showPDF(urlToPDF, slide=false) {
 
 const pdfData = [
     {
-        id: "view-pdf-thesis-text",
+        id: ["view-pdf-thesis-text"],
         url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-thesis-slides",
+        id: ["view-pdf-thesis-slides"],
         url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
         slide: true,
     },
     {
-        id: "view-pdf-dissertation-text",
+        id: ["view-pdf-dissertation-text"],
         url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-dissertation-slides",
+        id: ["view-pdf-dissertation-slides"],
         url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
         slide: true,
     },
     {
-        id: "view-pdf-gpr",
+        id: ["view-pdf-gpr", "view-pdf-gpr-2"],
         url: "https://arxiv.org/pdf/2206.09976.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-int",
+        id: ["view-pdf-int"],
         url: "https://arxiv.org/pdf/2009.07385.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-inv",
+        id: ["view-pdf-inv"],
         url: "https://arxiv.org/pdf/2207.08038.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-res",
+        id: ["view-pdf-res"],
         url: "https://arxiv.org/pdf/1808.07965v1.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-top",
+        id: ["view-pdf-top"],
         url: "https://arxiv.org/pdf/2209.13775.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-dis",
+        id: ["view-pdf-dis"],
         url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-dis-slide",
+        id: ["view-pdf-dis-slide"],
         url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
         slide: true,
     },
     {
-        id: "view-pdf-the",
+        id: ["view-pdf-the"],
         url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
         slide: false,
     },
     {
-        id: "view-pdf-the-slide",
+        id: ["view-pdf-the-slide", "view-pdf-the-slide-2"],
         url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
         slide: true,
     },
     {
-        id: "view-pdf-cv",
-        url: "assets/files/cv.pdf",
+        id: ["view-pdf-cv"],
+        // url: "assets/files/cv.pdf",
+        // url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
+        url: "http://transport.me.berkeley.edu/nas/public/files/cv.pdf",
         slide: false,
     },
 ]
@@ -168,11 +170,13 @@ const pdfData = [
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
     for (const data of pdfData) {
-        el = document.getElementById(data.id)
-        if (el) {
-            el.addEventListener("click", function () {
-                showPDF(data.url, data.slide)
-            });
+        for (const id of data.id){
+            el = document.getElementById(id)
+            if (el) {
+                el.addEventListener("click", function () {
+                    showPDF(data.url, data.slide)
+                });
+            }
         }
     } 
 });
