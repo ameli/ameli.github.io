@@ -158,6 +158,8 @@ const pdfData = [
         id: ["view-pdf-cv"],
         // url: "assets/files/cv.pdf",
         url: "https://ameli.github.io/assets/files/cv.pdf",
+        // url: "https://www.dropbox.com/s/3epmnxwhrnk7lgd/Bodea%20Brochure.pdf?dl=0",
+        // url: "https://dl.dropboxusercontent.com/s/3epmnxwhrnk7lgd/Bodea%20Brochure.pdf",
         // url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
         // url: "http://transport.me.berkeley.edu/nas/public/files/cv.pdf",
         slide: false,
