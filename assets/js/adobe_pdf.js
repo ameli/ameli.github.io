@@ -136,35 +136,61 @@ const pdfData = [
     },
     {
         id: ["view-pdf-dis"],
-        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
+        // url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
+        url: "https://www.dropbox.com/s/6zu0dlmhuto1htm/dissertation_text.pdf?dl=0",
         slide: false,
     },
     {
         id: ["view-pdf-dis-slide"],
-        url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
+        // url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
+        url: "https://www.dropbox.com/s/0v669te6ampe7ma/dissertation_slides.pdf?dl=0",
         slide: true,
     },
     {
         id: ["view-pdf-the"],
-        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
+        // url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
+        url: "https://www.dropbox.com/s/0yru1e5z9fckcx2/thesis_text.pdf?dl=0",
         slide: false,
     },
     {
         id: ["view-pdf-the-slide", "view-pdf-the-slide-2"],
-        url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
+        // url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
+        url: "https://www.dropbox.com/s/kjx55oqoso8vo9e/thesis_slides.pdf?dl=0",
         slide: true,
     },
     {
         id: ["view-pdf-cv"],
-        // url: "assets/files/cv.pdf",
-        url: "https://ameli.github.io/assets/files/cv.pdf",
-        // url: "https://www.dropbox.com/s/3epmnxwhrnk7lgd/Bodea%20Brochure.pdf?dl=0",
-        // url: "https://dl.dropboxusercontent.com/s/3epmnxwhrnk7lgd/Bodea%20Brochure.pdf",
-        // url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
         // url: "http://transport.me.berkeley.edu/nas/public/files/cv.pdf",
+        url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
         slide: false,
     },
 ]
+
+// ========================
+// Direct Link From Dropbox
+// ========================
+
+// Converts a standard Dropbox link to a direct download link.
+// This function converts
+function directLinkFromDropboxLink(dropboxLink) {
+    var reg = /github.com\/[\s\S]*?\//;
+    url = dropboxLink.replace(reg, "").replace("blob/main/", "");
+    return url;
+}
+
+// =======================
+// Direct Link From Github
+// =======================
+
+// Converts a standard Github link to a direct download link
+// This script converts:
+//     "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf"
+// to
+//     "https://ameli.github.io/assets/files/cv.pdf"
+
+function directLinkFromGithubLink(githubLink) {
+    return githubLink.replace("www.dropbox.com", "dl.dropboxusercontent.com").replace("?dl=0", "");
+}
 
 // =========================================
 // Add Adobe Embedded event for each element
@@ -177,7 +203,21 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
             el = document.getElementById(id)
             if (el) {
                 el.addEventListener("click", function () {
-                    showPDF(data.url, data.slide)
+
+                    var url = data.url;
+
+                    // If the url is a standard share link from dropbox, convert it to direct download link
+                    if (url.includes("www.dropbox.com")) {
+                        url = directLinkFromGithubLink(url);
+                    }
+
+                    // If the url is a standard share link from dropbox, convert it to direct download link
+                    if (url.includes("github.com")) {
+                        url = directLinkFromDropboxLink(url);
+                    }
+
+                    // Show pdf with Adobe Embed
+                    showPDF(url, data.slide)
                 });
             }
         }
