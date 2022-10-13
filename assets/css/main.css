@@ -478,3 +478,10 @@ pre .language-bib {
     font-size: 15px;
     padding-top: 20px;
 }
+
+/* In Safari browser, the columns of the rows of the Bootstrap grid are not shown in one row,
+ * rather, on multiple row. The following style below fix this issue. */
+.row:before, .row:after {
+    display: flex !important;
+    /* display: inline-block; */
+}

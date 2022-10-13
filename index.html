@@ -351,7 +351,7 @@
             <!-- Row Entry -->
             <!-- ~~~~~~~~~ -->
 
-            <li>
+            <li id="restore-paper">
                 Ameli, S., Shadden. S. C. (2018). <span class="my-highlight"><i>A Transport Method for Restoring Incomplete Ocean Current Measurements</i></span>.
                 Journal of Geophysical Research: Oceans, 124, 227-242.
                 <a href="https://doi.org/10.1029/2018JC014254">DOI</a>
@@ -661,7 +661,7 @@
 
                         <p class="pext">This package uses <i>imate</i> as its computational engine, hence, it is scalable to <b>very large matrices</b> and is capable of <b>petascale computation</b> on <b>multi-GPU clusters</b>.
 
-                        <p class="pext">Some of the features of this package include supporting mixed covariance models, automatic relevance determination (ARD), Jacobian and Hessian based optimization, learning hyperparameters in reduced space (profile likelihood) as described in this <a href="javascript:void(0);" id="view-pdf-gpr-2">paper</a>, and successive evaluations of prediction with \(\mathcal{O}(n)\) complexity.
+                        <p class="pext">Some of the features of this package include supporting mixed covariance models, automatic relevance determination (ARD), Jacobian and Hessian-based optimization, learning hyperparameters in reduced space (profile likelihood) as described in this <a href="javascript:void(0);" id="view-pdf-gpr-2">paper</a>, and successive evaluations of prediction with \(\mathcal{O}(n)\) complexity.
                         </p>
 
                         <p class="pext"><i>G-learn</i> is distributed on <a href="https://pypi.org/project/glearn/">PyPI</a>, <a href="https://anaconda.org/s-ameli/imate">Anaconda Cloud</a>, and <a href="https://hub.docker.com/r/sameli/glearn">Docker Hub</a> for multiple platforms and Python versions.</p>
@@ -695,7 +695,7 @@
                         <i>Trace</i> (Trajectory Reconstruction and Analysis for Coherent Structure Evaluation) is a high-performance online gateway for Lagrangian analysis of oceanographic data.
 
                         <p class='pext'>
-                            <i>Trace</i> has a server-client architecture; On the front-end, it interacts with user's requests to receive data inputs, configure computation settings, and visualize the results on the fly on an interactive glob map. On the backend, it connects to remote or local data servers and performs parallel computation on massive data on an HPC cluster.
+                            <i>Trace</i> has a server-client architecture; On the front end, it interacts with users' requests to receive data inputs, configure computation settings, and visualize the results on the fly on an interactive globe map. On the backend, it connects to remote or local data servers and performs parallel computation on massive data on an HPC cluster.
                         </p>
 
                         <p class="pext">
@@ -703,52 +703,43 @@
                         </p>
 
                         <p class="pext">
-                            This online gateway has been used by several institutions world-wide for both research and field experiments in real time service.
+                            This online gateway together with <i>Restore</i> (a companion tool) are used by several institutions for both research and field experiments in real-time service.
                         </p>
 
                         <p class="pext">
-                            You may watch a few videos of <i>Trace</i>:
+                            A few videos of the usage of <i>Trace</i> and visualization of computed data can be found below.
                         <ul>
-                            <li><a class="" href="#videos">State of The Ocean</a>, a short film!</li>
+                            <li><a class="" href="#videos">State of The Ocean</a></li>
                             <li><a class="" href="#video-trace">Demo</a> of <i>Trace</i></li>
-                            <li><a data-toggle="modal" href="#animModal" aria-expanded="false" aria-controls="collapse-bib-inv">Animation</a> of Pacific Ocean</li>
+                            <li><a data-toggle="modal" href="#pacificModal" aria-expanded="false" aria-controls="collapse-bib-inv">Animation</a> of Pacific Ocean</li>
                         </ul>
                         </p>
 
                         <!-- Video of Animation -->
-                        <div class="modal fade" id="animModal" tabindex="-1" aria-labelledby="animModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable" style="width: fit-content;">
-                                <div class="modal-content">
+                        <div class="modal fade" id="pacificModal" tabindex="-1" aria-labelledby="animModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width: fit-content;">
+                                <div class="modal-content" style="display: contents;">
 
                                     <!-- Header -->
                                     <div class="modal-header" style="background-color: black; border-color: black;">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 1">&times;</button>
-                                        <!-- <h4 class="modal-title fs-5" id="animModalLabel" style="display: flex">Finite-Time Lyapunov Exponent on Pacific Ocean</h4> -->
+                                        <h4 class="modal-title fs-5" id="animModalLabel" style="display: flex; color: hsl(0, 0%, 75%);">Finite-Time Lyapunov Exponent on Pacific Ocean, One Year Time Lapse</h4>
                                     </div>
 
                                     <!-- Modal Body -->
-                                    <div class="modal-body" style="width: 95vw; aspect-ratio: 1920/882; padding: 0px; background-color: hsl(220, 100%, 50%);">
+                                    <div class="modal-body" style="display: contents; height: 100%; padding: 0px; background-color: hsl(215, 100%, 50%);">
+                                        <iframe id="video-pacific-iframe" src="https://player.vimeo.com/video/759752231?h=8f91c11726&byline=0&portrait=0&title=0&loop=1" style="width:98vw; aspect-ratio: 1920/882; border:none;" allowfullscreen></iframe>
 
-                                        <!-- <div class="col-sm-10" style="height: 50%; padding:0px;"> -->
-                                            <!-- <div style="height: 100%;"> -->
-                                                <iframe id="video-pacific-iframe" src="https://player.vimeo.com/video/759752231?h=8f91c11726&byline=0&portrait=0&title=1&loop=1" style="width:100%; height: 100%; border:none;" allowfullscreen></iframe>
-
-                                                <!-- Scroll to section when video is played -->
-                                                <!-- <script> -->
-                                                <!--     var iframe0 = document.getElementById("video-pacific-iframe"); -->
-                                                <!--     var section1 = document.getElementById("videos"); -->
-                                                <!--     var player1 = new Vimeo.Player(iframe1); -->
-                                                <!--  -->
-                                                <!--     player1.on('play', function() { -->
-                                                <!--         section1.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"}); -->
-                                                <!--     }); -->
-                                                <!-- </script> -->
-                                            <!-- </div> -->
-                                        <!-- </div> -->
-
+                                        <!-- Unload video when modal hides -->
+                                        <!-- <script> -->
+                                        <!--         var pacificModal = document.getElementById("pacificModal"); -->
+                                        <!--         pacificModal.addEventListener('hidden.bs.modal', function (event) { -->
+                                        <!--             var iframe0 = document.getElementById("video-pacific-iframe"); -->
+                                        <!--             var player0 = new Vimeo.Player(iframe0); -->
+                                        <!--             player.unload() -->
+                                        <!--     }); -->
+                                        <!-- </script> -->
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -769,15 +760,23 @@
                         <p  class="pext">Visit <i>Restore</i> <a href="http://transport.me.berkeley.edu/restore">Homepage</a>.</p>
 
                         <p class='pext'>
+                            <i>Restore</i> is an online computational gateway to reconstruct incomplete oceanographic datasets.
                         </p>
 
                         <p class="pext">
+                            <i>Restore</i> is developed to be a companion tool to <i>Trace</i> as it can reconstruct the ocean's surface velocity data from incomplete radar or satellite measurements. The processed velocity data are then used as input to <i>Trace</i> to perform further Lagrangian analysis.
+                        <p>
+
+                        <p class="pext">
+                            Similar to <i>Trace</i>, this tool has a server-client architecture with an interactive user interface at the front end, while at the backend, it connects to remote or local data servers to stream input data and performs parallel computation on an HPC cluster. It then visualizes the results on the user's browser on the globe's map.
                         </p>
 
                         <p class="pext">
+                        The data restoration algorithm employs a feature-preserving image processing technique originated from fluid dynamics (transport partial differential equation) where the missing data are filled by advecting information on regions where the data field is known. More on the algorithm can be found in this <a href="#restore-paper"> paper</a>.
                         </p>
 
                         <p class="pext">
+                            A <a href="#video-restore">Demo Video</a> of <i>Restore</i> briefly demonstrates its use.
                         </p>
 
                     </div>
