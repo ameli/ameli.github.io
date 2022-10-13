@@ -87,3 +87,77 @@ function darkMode() {
         el.innerHTML = 'Light mode';
     }
 }
+
+
+// ==========================
+// Scroll to Snap on Sections
+// ==========================
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    // This function works on those div sections with "scroll-snap" class.
+    sections = document.getElementsByClassName("scroll-snap");
+
+    // Wait time to to the last user scroll to begging auto scrolling
+    const scrollWait = 1000;
+
+    // When auto-scroll started, the scrolling is animated (smooth), which itself triggers more
+    // scrolling event. This lock time locks any father scrolling till smooth scrolling it over.
+    const scrollLockWait = 500;
+
+    // Percent of section position to start scrolling
+    var relativePosThreshold = 0.25;
+
+    // Visible window height
+    var visible = window.innerHeight;
+
+    var scrollLock = false;
+    var lastScrollTime = Date.now();
+
+    window.addEventListener("scroll", (event) => {
+
+        // Keep recording of the last time of scrolling (avoid race condition by using temp)
+        var tempScrollTime = Date.now()
+        if (tempScrollTime > lastScrollTime) {
+            lastScrollTime = tempScrollTime;
+        }
+
+        if (scrollLock == false) {
+            let pos = window.scrollY;
+
+            for (let i = 0, l = sections.length; i < l; i++) {
+
+                var scroll = false;
+                let relativePos = (sections[i].offsetTop - pos) / (visible);
+
+                // Scroll if section relative position is close to the threshold
+                if (Math.abs(relativePos) < relativePosThreshold) {
+                    scroll = true;
+                }
+
+                // If the section height is larger than visible window and the user scrolled downward, do not auto-scroll
+                // as some of the section texts wrap and the whole paragraphs extend to below the visible screen, so
+                // auto-scroll does not allow user to continue reading the end parts of the section. 
+                if (relativePos < -0.1 && sections[i].offsetHeight > 1.03 * visible) {
+                    scroll = false;
+                }
+
+                if (scroll == true) {
+                    // Wait for 1000 ms.
+                    setTimeout(function(){
+
+                        // Execute only if in the past 500 ms there was no scroll event
+                        if (Date.now() - lastScrollTime >= 0.96*scrollWait){
+                            scrollLock = true;
+                            sections[i].scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+                            setTimeout(function(){
+                                scrollLock = false;
+                            }, scrollLockWait);
+                        }
+                    }, scrollWait);
+                    break;
+                }
+            }
+        }
+    });
+});
