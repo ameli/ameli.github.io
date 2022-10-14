@@ -485,3 +485,21 @@ pre .language-bib {
     display: flex !important;
     /* display: inline-block; */
 }
+
+/* Safari before version 15 does not support aspect-ratio property */
+#video-pacific-iframe {
+    aspect-ratio: 1920/882;
+    /* Fallback */
+    @supports not (aspect-ratio: 1920 / 882) {
+        &::before {
+            float: left;
+            padding-top: 45.93%;   /* 882/1920 */
+            content: "";
+        }
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+}
