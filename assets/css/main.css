@@ -454,12 +454,9 @@ pre .language-bib {
 .equal {
     display: flex;
     display: -webkit-flex;
-    flex-wrap: wrap;
-}
-.row {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    flex-wrap: wrap;
 }
 
 /* For the Captions of Bootstrap Carousel. */
@@ -502,4 +499,31 @@ pre .language-bib {
             clear: both;
         }
     }
+}
+
+/* Introduction row was made to have "display: flex" style so that its second column
+ * do not wrap around the first column (profile picture). However, this is not a wanted
+ * style on mobile phone view since the second column do not go under the first column.
+ * To do so, we add "flex-direction: column", but only if the screen width is small to
+ * be applied on mobile devices. */
+@media only screen and (max-width: 680px){
+    #intro-row {
+        flex-direction: column;
+    }
+}
+
+/* The nav-bar is made to have "navbar-default" class. Here we make the navbar to
+ * be similar to "navbar-light" class. But why we did not use nabvar-light in the
+ * first place? Because navbar-light does not collapse the navigation bas to a menu
+ * on mobile devices, so I had so start with the navbar-default class. */ 
+
+.my-navbar-light {
+    background-color: hsl(0deg 100% 0% / 0%) !important;
+    border-color: hsl(0deg 100% 0% / 0%) !important;
+}
+.my-navbar-light .navbar-nav>li>a {
+    color: #337ab7 !important;  /* Make menu links color the same color as anchors */
+}
+.dark-mode .my-navbar-light .navbar-nav>li>a {
+    color: hsl(50, 50%, 60%) !important; /* Make menu links color the same color as anchors */
 }
