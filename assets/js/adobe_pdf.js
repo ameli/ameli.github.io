@@ -82,6 +82,18 @@ function showPDF(urlToPDF, slide=false) {
         },
         viewerOptions
     );
+
+    // Zoom if not slide
+    var zoomLevel = 1.2;
+    if (slide == false) {
+        previewFilePromise.then(adobeViewer => {
+            adobeViewer.getAPIs().then(apis => {
+                    apis.getZoomAPIs().setZoomLevel(zoomLevel)
+                            .then(result => console.log(result))
+                            .catch(error => console.log(error));
+            });
+        });
+    }
 }
 
 // =============================
