@@ -135,8 +135,7 @@ th, td {
 
 .tooltip-slide .tooltiptext {
   visibility: hidden;
-  /* width: 500px; */
-  width: 596px;
+  width: 450px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -148,8 +147,7 @@ th, td {
   /* bottom: 140%; */
   bottom: 102%;
   left: 50%;
-  /* margin-left: -250px; */
-  margin-left: -298px;
+  margin-left: -225px;
 }
 
 .tooltip-slide .tooltiptext::after {
@@ -206,20 +204,20 @@ th, td {
 }
 
 .social-links {
-  /* list-style: none; */
-  padding-left: 0px;
-  /* font-size: 18px; */
+    /* list-style: none; */
+    padding-left: 0px;
+    /* font-size: 18px; */
 }
 
 .social-links li {
-  display: inline-block;
-  margin-right: 8px;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 /* .social-links a { */
 a {
-  text-decoration: none;
-  padding: 4px;
+    text-decoration: none;
+    padding: 4px;
 }
 
 a:hover {
@@ -522,8 +520,18 @@ pre .language-bib {
     border-color: hsl(0deg 100% 0% / 0%) !important;
 }
 .my-navbar-light .navbar-nav>li>a {
+    text-decoration: none;
     color: #337ab7 !important;  /* Make menu links color the same color as anchors */
 }
 .dark-mode .my-navbar-light .navbar-nav>li>a {
+    text-decoration: none;
     color: hsl(50, 50%, 60%) !important; /* Make menu links color the same color as anchors */
+}
+.my-navbar-light .navbar-nav>li>a:hover {
+    text-decoration: none;
+    background-color: hsl(200, 50%, 90%) !important;
+}
+.dark-mode .my-navbar-light .navbar-nav>li>a:hover {
+    text-decoration: none;
+    background-color: hsl(50, 15%, 25%) !important;
 }
