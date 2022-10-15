@@ -188,11 +188,9 @@ const pdfData = [
 // ========================
 
 // Converts a standard Dropbox link to a direct download link.
-// This function converts
+
 function directLinkFromDropboxLink(dropboxLink) {
-    var reg = /github.com\/[\s\S]*?\//;
-    url = dropboxLink.replace(reg, "").replace("blob/main/", "");
-    return url;
+    return dropboxLink.replace("www.dropbox.com", "dl.dropboxusercontent.com").replace("?dl=0", "");
 }
 
 // =======================
@@ -206,7 +204,9 @@ function directLinkFromDropboxLink(dropboxLink) {
 //     "https://ameli.github.io/assets/files/cv.pdf"
 
 function directLinkFromGithubLink(githubLink) {
-    return githubLink.replace("www.dropbox.com", "dl.dropboxusercontent.com").replace("?dl=0", "");
+    var reg = /github.com\/[\s\S]*?\//;
+    url = githubLink.replace(reg, "").replace("blob/main/", "");
+    return url;
 }
 
 // =========================================
@@ -226,12 +226,12 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
                     // If the url is a standard share link from dropbox, convert it to direct download link
                     if (url.includes("www.dropbox.com")) {
-                        url = directLinkFromGithubLink(url);
+                        url = directLinkFromDropboxLink(url);
                     }
 
                     // If the url is a standard share link from dropbox, convert it to direct download link
                     if (url.includes("github.com")) {
-                        url = directLinkFromDropboxLink(url);
+                        url = directLinkFromGithubLink(url);
                     }
 
                     // Show pdf with Adobe Embed
