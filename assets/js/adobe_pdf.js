@@ -154,6 +154,12 @@ const pdfData = [
         allowTextSelection: true,
     },
     {
+        id: ["view-pdf-sto"],
+        url: "https://www.dropbox.com/s/maa5q9uldz2avt7/arxiv-4556754.pdf?dl=0",
+        slide: false,
+        allowTextSelection: true,
+    },
+    {
         id: ["view-pdf-dis"],
         // url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
         url: "https://www.dropbox.com/s/6zu0dlmhuto1htm/dissertation_text.pdf?dl=0",
