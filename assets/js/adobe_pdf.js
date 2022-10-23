@@ -119,7 +119,8 @@ const pdfData = [
     {
         id: ["view-pdf-cv"],
         // url: "http://transport.me.berkeley.edu/nas/public/files/cv.pdf",
-        url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
+        // url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
+        url: "https://www.dropbox.com/s/5y0rl1dig2tc13c/cv.pdf?dl=0",
         slide: false,
         allowTextSelection: true,
     },
