@@ -2,13 +2,12 @@
 Issues
 ======
 
-* Adobe Embed API does not work on safari 12. It throws a `TypeError`.
-  However, Adobe Embed API works on safari 13.
+* Adobe Embed API does not work on safari 12 due to `TypeError`. But it works
+  on safari 13.
 
-* In safari prior to version 15, the modal with id="pacificModal" does not have
-  the correct aspect ratio. Namely, the embedded "vimeo video" inside the
-  "iframe" inside the "modal-body" of the "modal" should have the property
-  "aspect-ratio: 1920/882". However, the property "aspect-ratio" has not been
+* The embedded vimeo video with id="pacificModal" in the "iframe" inside
+  "modal-body" of the "modal" should have the property "aspect-ratio: 1920/882"
+  to be dislayed properly. However, the property "aspect-ratio" has not been
   introduced in safari prior to version 15. The workarounds (see @media {...}
   in main.css) do not work.
 

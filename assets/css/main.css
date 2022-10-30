@@ -187,10 +187,6 @@ th, td {
     display:inline-block;
 }
 
-.im {
-    filter: blur;
-}
-
 .profile-picture {
     border-radius: 50%;
     padding: 5px;
@@ -439,7 +435,6 @@ pre .language-bib {
 .pext {
     margin-top: 10px;
     margin-bottom: 15px;
-    font-family: 
 }
 
 /* To change the font of anchors (which is monospace) to serif*/
