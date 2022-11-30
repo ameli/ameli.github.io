@@ -1,0 +1,11 @@
+.DocumentView__DocumentView___1NM7b {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.react-spectrum-provider spectrum spectrum--light spectrum--medium {
+    backdrop-filter: blur(2px) !important;
+}
+
+.sdk-HeaderView-header {
+    display: none !important;
+}
