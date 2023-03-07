@@ -119,13 +119,12 @@ function slide_directLinkFromGithubLink(githubLink) {
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
 
+    // Get div element
     var id = "adobe-dc-view";
     el = document.getElementById(id)
 
+    // Get url
     var url = el.dataset.url;
-    console.log('------------')
-    console.log(url);
-    console.log('------------')
 
     // If the url is a standard share link from dropbox, convert it to direct download link
     if (url.includes("www.dropbox.com")) {
