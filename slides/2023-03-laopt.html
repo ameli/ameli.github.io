@@ -25,7 +25,7 @@
     <!-- <meta name="description" content="Postdoctoral Researcher at University of California, Berkeley"> -->
 
     <!-- Scripts -->
-    <script src="assets/js/adobe_pdf.js"></script>
+    <script src="../assets/js/adobe_slide.js"></script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -38,39 +38,15 @@
 
 <body>
 
-    <div id="adobe-dc-view" style="height: 100vh;"></div>
-    <script type="text/javascript">
+    <!-- ----- -->
+    <!-- Slide -->
+    <!-- ----- -->
 
-        function GetURLParameter(sParam)
-        {
-            var sPageURL = window.location.search.substring(1);
-            var sURLVariables = sPageURL.split('&');
-            for (var i = 0; i < sURLVariables.length; i++)
-            {
-                var sParameterName = sURLVariables[i].split('=');
-                if (sParameterName[0] == sParam)
-                {
-                    return sParameterName[1];
-                }
-            }
-        }
-
-        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-
-            // const urlParams = new URLSearchParams(queryString);
-            // const product = urlParams.get('product')
-            // console.log(product);
-            var url = GetURLParameter('url');
-            console.log(url);
-
-            var adobeDCView = new AdobeDC.View({clientId: "becbabeb5d0d4204b5b99689751e71ef", divId: "adobe-dc-view"});
-            adobeDCView.previewFile({
-                content:{location: {url: url}},
-                metaData:{fileName: "Slide.pdf"}
-            }, {embedMode: "SIZED_CONTAINER"});
-        });
-    </script>
-
+    <div 
+        id="adobe-dc-view"
+        data-url="https://www.dropbox.com/s/ahs83gmnspq77j4/LaOpt-Stanford-2023-slides.pdf?dl=0"
+        style="height: 100vh;">
+    </div>
 
     <!-- ~~~~~~~ -->
     <!-- Scripts -->
