@@ -190,7 +190,6 @@ const pdfData = [
     },
     {
         id: ["view-pdf-laopt-slide"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
         url: "https://www.dropbox.com/s/ahs83gmnspq77j4/LaOpt-Stanford-2023-slides.pdf?dl=0",
         slide: true,
         allowTextSelection: false,
