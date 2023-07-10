@@ -118,7 +118,7 @@ function showPDF(urlToPDF, slide=false, allowTextSelection) {
 const pdfData = [
     {
         id: ["view-pdf-cv"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/cv.pdf",
+        // url: "https://transport.me.berkeley.edu/nas/public/files/cv.pdf",
         url: "https://github.com/ameli/ameli.github.io/blob/main/assets/files/cv.pdf",
         // url: "https://www.dropbox.com/s/5y0rl1dig2tc13c/cv.pdf?dl=0",
         slide: false,
@@ -162,28 +162,28 @@ const pdfData = [
     },
     {
         id: ["view-pdf-dis"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
+        // url: "https://transport.me.berkeley.edu/nas/public/files/dissertation_text.pdf",
         url: "https://www.dropbox.com/s/6zu0dlmhuto1htm/dissertation_text.pdf?dl=0",
         slide: false,
         allowTextSelection: false,
     },
     {
         id: ["view-pdf-dis-slide"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
+        // url: "https://transport.me.berkeley.edu/nas/public/files/dissertation_slides.pdf",
         url: "https://www.dropbox.com/s/0v669te6ampe7ma/dissertation_slides.pdf?dl=0",
         slide: true,
         allowTextSelection: false,
     },
     {
         id: ["view-pdf-the"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
+        // url: "https://transport.me.berkeley.edu/nas/public/files/thesis_text.pdf",
         url: "https://www.dropbox.com/s/0yru1e5z9fckcx2/thesis_text.pdf?dl=0",
         slide: false,
         allowTextSelection: false,
     },
     {
         id: ["view-pdf-the-slide", "view-pdf-the-slide-2"],
-        // url: "http://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
+        // url: "https://transport.me.berkeley.edu/nas/public/files/thesis_slides.pdf",
         url: "https://www.dropbox.com/s/kjx55oqoso8vo9e/thesis_slides.pdf?dl=0",
         slide: true,
         allowTextSelection: false,

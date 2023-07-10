@@ -213,7 +213,10 @@ th, td {
 /* .social-links a { */
 a {
     text-decoration: none;
-    padding: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 a:hover {
